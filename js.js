@@ -1,41 +1,33 @@
 const root = document.querySelector("#root");
-const pro = [
-    {
-        id: 1,
-        name: "pro 1",
-        price: 200
-    },
-    {
-        id: 2,
-        name: "pro 2",
-        price: 888
-    },
-    {
-        id: 3,
-        name: "pro 3",
-        price: 666
-    },
-    {
-        id: 4,
-        name: "pro 4",
-        price: 555
-    },
-    {
-        id: 5,
-        name: "pro 5",
-        price: 444
+const userErr = document.querySelector("#userErr");
+const passErr = document.querySelector("#passErr");
+const form = document.querySelector("#form");
+const user = document.querySelector("#user");
+const pass = document.querySelector("#pass");
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let err = {};
+    let checkErr = (ojb) => {
+        for (let item in ojb) {
+            if (ojb.hasOwnProperty(item)) {
+                return true;
+            }
+            return false;
+        }
     }
-]
 
+    if (user.value.trim() == "") {
+        err.userErr = "Chưa nhập tên người dùng!";
+    }
+    if (pass.value.trim() == "") {
+        err.passErr = "Chưa nhập mật khẩu!";
+    }
 
-let pros = pro.map((product) => {
-    return `<div  id="${product.id}">
-    <div>
-    <a href=""> 
-        <h3>${product.name}</h3>
-        <p>${product.price}</p>
-    </a>
-    </div>
-    </div>`
-}).join("");
-root.innerHTML = pros
+    if (checkErr) {
+        userErr.innerHTML = err.userErr ? err.userErr : '';
+        passErr.innerHTML = err.passErr ? err.passErr : '';
+    } else {
+
+    }
+})

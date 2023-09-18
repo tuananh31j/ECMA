@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div>
+    <div class="flex gap-6">
         <h1 class="font-bold"></h1>
         <form action="" id="formAdd">
             <div>
@@ -17,7 +17,7 @@
                 <input type="text" class="border-2 p-3 rounded-sm block w-80 mb-4 border-orange-950"
                     id="product" name="product" placeholder="Nhập tên của sản phẩm">
                 <div>
-                    <p id="productErr"></p>
+                    <p class="text-red-600" id="productErr"></p>
                 </div>
             </div>
             <div>
@@ -25,7 +25,7 @@
                 <input type="text" class="border-2 p-3 rounded-sm block w-80 mb-4 border-orange-950"
                     id="id" name="id" placeholder="Nhập mã sản phẩm">
                 <div>
-                    <p id="idErr"></p>
+                    <p class="text-red-600" id="idErr"></p>
                 </div>
             </div>
             <div>
@@ -34,12 +34,11 @@
                     name="supplier" id="supplier">
                     <option value="">--chọn nhà cung cấp--</option>
                     <option value="1">Samsung</option>
-                    <option value="2">Apple</option>
-                    <option value="3">Microsoft</option>
-                    <option value="4">Xiaomi</option>
+                    <option value="0">Apple</option>
+
                 </select>
                 <div>
-                    <p id="supplierErr"></p>
+                    <p class="text-red-600" id="supplierErr"></p>
                 </div>
             </div>
             <div>
@@ -47,7 +46,7 @@
                 <input type="text" class="border-2 p-3 rounded-sm block w-80 mb-4 border-orange-950"
                     id="quality" name="quality" placeholder="Nhập số lượng">
                 <div>
-                    <p id="qualityErr"></p>
+                    <p class="text-red-600" id="qualityErr"></p>
                 </div>
             </div>
             <div>
@@ -55,7 +54,7 @@
                 <input type="text" class="border-2 p-3 rounded-sm block w-80 mb-4 border-orange-950"
                     id="price" name="price" placeholder="Nhập giá tiền">
                 <div>
-                    <p id="priceErr"></p>
+                    <p class="text-red-600" id="priceErr"></p>
                 </div>
             </div>
             <div>
@@ -67,14 +66,31 @@
                     <option value="0">Hết hàng</option>
                 </select>
                 <div>
-                    <p id="statusErr"></p>
+                    <p class="text-red-600" id="statusErr"></p>
                 </div>
             </div>
             <div>
                 <button id="btnAdd" class="w-80 p-3 bg-red-500 text-white">Thêm mới</button>
             </div>
         </form>
-        <div id="pro"></div>
+        <div>
+            <table class="border-2 border-black">
+                <thead>
+                    <tr class="border-2 border-black">
+                        <th class="border-2 border-black">Tên sản phẩm</th>
+                        <th class="border-2 border-black">Mã sản phẩm</th>
+                        <th class="border-2 border-black">Nhà cung cấp</th>
+                        <th class="border-2 border-black">Số lượng</th>
+                        <th class="border-2 border-black">Giá</th>
+                        <th class="border-2 border-black">Trạng thái</th>
+                    </tr>
+                </thead>
+
+                <tbody id="pro">
+
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <script src="js.js"></script>

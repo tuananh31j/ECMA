@@ -20,8 +20,8 @@ formAdd.addEventListener("submit", (e) => {
     const err = {};
     let data = {};
     const checkErr = (obj) => {
-        for (let item in ojb) {
-            if (ojb.hasOwnProperty(item)) {
+        for (let item in obj) {
+            if (obj.hasOwnProperty(item)) {
                 return false;
             }
             return true;
@@ -59,7 +59,9 @@ formAdd.addEventListener("submit", (e) => {
         qualityErr.innerText = err.quality || "";
         priceErr.innerText = err.price || "";
         statusErr.innerText = err.statusElement || "";
-    } else {
+        console.log("haha")
+    }
+    if (Object.keys(err).length == 0) {
         data = {
             product: product.value.trim(),
             idPro: idPro.value.trim(),
@@ -68,9 +70,18 @@ formAdd.addEventListener("submit", (e) => {
             price: price.value.trim(),
             status: statusElement.value.trim(),
         };
-        datas.unShift(data);
+        datas.unshift(data);
+        console.log("huu")
     }
+    document.querySelector("#pro").innerHTML = datas.map(item => `<tr>
+    <td class="border-2 border-black">${item.product}</td>
+    <td class="border-2 border-black">${item.idPro}</td>
+    <td class="border-2 border-black">${item.supplier == "1" ? "samsung" : "apple"}</td>
+    <td class="border-2 border-black">${item.quality}</td>
+    <td class="border-2 border-black">${item.price}</td>
+    <td class="border-2 border-black">${item.status == 0 ? "Hết hàng" : "Còn hàng"}</td>
+</tr>`).join("");
+
 })
 
-document.querySelector("#pro").innerHTML = datas.map(item => item.product)
 

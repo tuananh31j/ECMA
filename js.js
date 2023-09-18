@@ -1,154 +1,76 @@
-const form = document.querySelector("#form");
-const quality = document.querySelector("#quality");
+const formAdd = document.querySelector("#formAdd");
 const product = document.querySelector("#product");
-const kind = document.querySelector("#kind");
-const price = document.querySelector("#price");
-
-const qualityErr = document.querySelector("#qualityErr");
 const productErr = document.querySelector("#productErr");
-const kindErr = document.querySelector("#kindErr");
+const idPro = document.querySelector("#id");
+const idErr = document.querySelector("#idErr");
+const supplier = document.querySelector("#supplier");
+const supplierErr = document.querySelector("#supplierErr");
+const quality = document.querySelector("#quality");
+const quanlityErr = document.querySelector("#quanlityErr");
+const statusElement = document.querySelector("#status");
+const statusErr = document.querySelector("#statusErr");
+const price = document.querySelector("#price");
 const priceErr = document.querySelector("#priceErr");
-const shipPrice = document.querySelector("#shipPrice");
-
-const inside = document.querySelector("#inside");
-const outside = document.querySelector("#outside");
-
-const cartElement = document.querySelector("#cart");
-const noti = document.querySelector("#noti");
-
+const btnAdd = document.querySelector("#btnAdd");
 
 const datas = [];
 
-
-
-
-const handleShipRemove = () => {
-    ship.classList.remove('hidden')
-}
-const handleShipShow = () => {
-    ship.classList.add('hidden')
-}
-inside.addEventListener("click", handleShipShow)
-outside.addEventListener("click", handleShipRemove)
-
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    let inputChecked = document.querySelector("input[name='address']:checked");
-
-    let errors = {};
+formAdd.addEventListener("submit", (e) => {
+    e.preventDefault()
+    const err = {};
     let data = {};
-    let quality1 = Number(quality.value.trim());
-    console.log(Number.isInteger(quality1))
-    if (product.value.trim() == "") {
-        errors.product = "Chưa nhập tên sản phẩm!";
-    }
-
-    if (quality.value.trim() == "") {
-        errors.quality = "Chưa nhập số lượng!";
-    }
-    if (isNaN(quality.value.trim()) || !Number.isInteger(quality1)) {
-        errors.quality = "Giá trị phải là số nguyên!";
-    }
-
-    if (isNaN(price.value.trim())) {
-        errors.price = "Giá trị phải là số!";
-    }
-
-    if (kind.value.trim() == "") {
-        errors.kind = "Chưa chọn loại!";
-    }
-
-    if (price.value.trim() == "") {
-        errors.price = "Chưa nhập giá tiền!";
-    }
-
-    if (price.value.trim() < 0) {
-        errors.price = "Giá trị phải lớn hơn 0!";
-    }
-    if (quality.value.trim() < 0) {
-        errors.quality = "Giá trị phải lớn hơn 0!";
-    }
-
-
-    function checkErr(obj) {
-        for (let item in obj) {
-            if (obj.hasOwnProperty(item)) {
-                return false
+    const checkErr = (obj) => {
+        for (let item in ojb) {
+            if (ojb.hasOwnProperty(item)) {
+                return false;
             }
-            return true
+            return true;
         }
     }
-    if (!checkErr(errors)) {
-        qualityErr.innerText = errors.quality ? errors.quality : "";
 
-        productErr.innerText = errors.product ? errors.product : "";
-
-        kindErr.innerText = errors.kind ? errors.kind : "";
-
-        priceErr.innerText = errors.price ? errors.price : "";
-        noti.innerHTML = "<p class='text-red-600'>Lỗi!</p>"
-
+    if (product.value.trim() === "") {
+        err.product = "Chưa nhập tên sản phẩm!";
     }
-    if (Object.keys(errors).length == 0) {
-        let ship = (inputChecked.value == 0) ? 0 : shipPrice.value;
+    if (product.value.trim().length >= 5) {
+        err.product = "Sản phẩm tối thiểu 5 kí tự!";
+    }
+    if (idPro.value.trim() === "") {
+        err.id = "Chưa nhập mã sản phẩm";
+    }
+    if (supplier.value.trim() === "") {
+        err.supplier = "Chưa chọn nhà cung cấp!";
+    }
+    if (quality.value.trim() === "") {
+        err.quality = "Chưa nhập số lượng sản phẩm";
+    }
+
+    if (price.value.trim() === "") {
+        err.price = "Chưa nhập giá sản phẩm!";
+    }
+
+    if (statusElement.value.trim() === "") {
+        err.statusElement = "Chưa chọn trạng thái";
+    }
+
+    if (!checkErr(err)) {
+        productErr.innerText = err.product || "";
+        idErr.innerText = err.idPro || "";
+        supplierErr.innerText = err.supplier || "";
+        qualityErr.innerText = err.quality || "";
+        priceErr.innerText = err.price || "";
+        statusErr.innerText = err.statusElement || "";
+    } else {
         data = {
-            quality: quality.value.trim(),
             product: product.value.trim(),
-            kind: kind.value,
+            idPro: idPro.value.trim(),
+            supplier: supplier.value.trim(),
+            quality: quality.value.trim(),
             price: price.value.trim(),
-            ship: ship,
-            address: inputChecked.value
-        }
-        datas.unshift(data);
-        noti.innerHTML = "<p class='text-green-600'>Đặt hàng thành công!</p>"
-
+            status: statusElement.value.trim(),
+        };
+        datas.unShift(data);
     }
-    let dataElement = '';
-    if (datas.length != '') {
-        dataElement = datas.map(item => {
-            return `
-    <div class="flex gap-44 bg-slate-600 border-2 rounded-xl text-white p-4">
-                    <div>
-                        <div>
-                            <span>Sản phẩm:</span>
-                            <span class="italic">${item.product}</span>
-                        </div>
-                        <div>
-                            <span>Số lượng: </span>
-                            <span class="italic">${item.quality}</span>
-                        </div>
-                        <div>
-                            <span>Loại:</span>
-                            <span class="italic">${item.kind}</span>
-                        </div>
-                        <div>
-                            <span>Đơn giá:</span>
-                            <span class="italic">${item.price}</span>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <span>Nơi nhận hàng:</span>
-                            <span class="italic  text-green-600">${item.address == 0 ? "Nội thành" : "Ngoại thành"}</span>
-                        </div>
-                        <div>
-                            <span>Phí vận chuyển:</span>
-                            <span class="italic">${item.ship}</span>
-                        </div>
-                        <div>
-                            <span>Tổng tiền</span>
-                            <span class="italic">${Number(item.price) + Number(item.ship)}</span>
-                        </div>
-                    </div>
-                </div>
-    `
-        }).join("");
-    }
-
-    cartElement.innerHTML = dataElement;
 })
 
-
-
-
+document.querySelector("#pro").innerHTML = datas.map(item => item.product)
 

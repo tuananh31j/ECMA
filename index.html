@@ -1,99 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-<body>
-    <div class="flex gap-6">
-        <h1 class="font-bold"></h1>
-        <form action="" id="formAdd">
-            <div>
-                <lable class="text-xl font-medium my-8 " for="product">Tên sản phẩm:</lable>
-                <input type="text" class="border-2 p-3 rounded-sm block w-80 mb-4 border-orange-950"
-                    id="product" name="product" placeholder="Nhập tên của sản phẩm">
-                <div>
-                    <p class="text-red-600" id="productErr"></p>
-                </div>
-            </div>
-            <div>
-                <lable class="text-xl font-medium my-8 " for="id">Mã sản phẩm:</lable>
-                <input type="text" class="border-2 p-3 rounded-sm block w-80 mb-4 border-orange-950"
-                    id="id" name="id" placeholder="Nhập mã sản phẩm">
-                <div>
-                    <p class="text-red-600" id="idErr"></p>
-                </div>
-            </div>
-            <div>
-                <lable for="supplier" class="text-xl font-medium">Nhà cung cấp:</lable>
-                <select class="border-2 p-3 rounded-sm block w-80 mb-4 border-orange-950"
-                    name="supplier" id="supplier">
-                    <option value="">--chọn nhà cung cấp--</option>
-                    <option value="1">Samsung</option>
-                    <option value="0">Apple</option>
-
-                </select>
-                <div>
-                    <p class="text-red-600" id="supplierErr"></p>
-                </div>
-            </div>
-            <div>
-                <lable class="text-xl font-medium my-8 " for="quality">Số lượng:</lable>
-                <input type="text" class="border-2 p-3 rounded-sm block w-80 mb-4 border-orange-950"
-                    id="quality" name="quality" placeholder="Nhập số lượng">
-                <div>
-                    <p class="text-red-600" id="qualityErr"></p>
-                </div>
-            </div>
-            <div>
-                <lable class="text-xl font-medium my-8 " for="price">Giá tiền:</lable>
-                <input type="text" class="border-2 p-3 rounded-sm block w-80 mb-4 border-orange-950"
-                    id="price" name="price" placeholder="Nhập giá tiền">
-                <div>
-                    <p class="text-red-600" id="priceErr"></p>
-                </div>
-            </div>
-            <div>
-                <lable class="text-xl font-medium my-8 " for="status">Tình trạng:</lable>
-                <select class="border-2 p-3 rounded-sm block w-80 mb-4 border-orange-950"
-                    name="status" id="status">
-                    <option value="">--Chọn trạng thái sản phẩm--</option>
-                    <option value="1">Còn hàng</option>
-                    <option value="0">Hết hàng</option>
-                </select>
-                <div>
-                    <p class="text-red-600" id="statusErr"></p>
-                </div>
-            </div>
-            <div>
-                <button id="btnAdd" class="w-80 p-3 bg-red-500 text-white">Thêm mới</button>
-            </div>
-        </form>
-        <div>
-            <table class="border-2 border-black">
-                <thead>
-                    <tr class="border-2 border-black">
-                        <th class="border-2 border-black">Tên sản phẩm</th>
-                        <th class="border-2 border-black">Mã sản phẩm</th>
-                        <th class="border-2 border-black">Nhà cung cấp</th>
-                        <th class="border-2 border-black">Số lượng</th>
-                        <th class="border-2 border-black">Giá</th>
-                        <th class="border-2 border-black">Trạng thái</th>
-                    </tr>
-                </thead>
-
-                <tbody id="pro">
-
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <script src="js.js"></script>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/main.js"></script>
+  </body>
 </html>

@@ -1,0 +1,16 @@
+{
+    "complerOptions": {
+        "baseUrrl": "./src",
+        "module": "CommonJS",
+        "target": "ES6",
+        "outDir": "./dist",
+        "paths": {
+            "@": [
+                "*"
+            ]
+        }
+    },
+    "exclude": [
+        "node_module"
+    ]
+}

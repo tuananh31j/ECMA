@@ -1,5 +1,6 @@
 import HomePage from "./home";
 import AboutPage from "./about";
 import ProductPage from "./product";
+import Admin from "./admin";
 
-export { HomePage, AboutPage, ProductPage };
+export { HomePage, AboutPage, ProductPage, Admin };

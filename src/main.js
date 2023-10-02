@@ -1,24 +1,25 @@
 import Navigo from "navigo";
-import { HomePage, AboutPage, ProductPage } from "./pages";
-import layoutMain from "./layout";
-import { menus, products, categories } from "@/data";
-
+import { HomePage, AboutPage, ProductPage, Admin } from "./pages";
+import LayoutMain from "@/layout/index.js";
+import { Header, Footer } from "./layout/index.js"
 const app = document.querySelector('#app');
 const router = new Navigo("/", { linksSelector: "a" });
 
-
 router.on("/", () => {
-    app.innerHTML = "<div>gagds</div>";
+    app.innerHTML = LayoutMain(HomePage);
 })
-router.on("/About", () => {
-    app.innerHTML = 'div';
+
+router.on("/about", () => {
+    app.innerHTML = LayoutMain(AboutPage);
 })
+
 router.on("/product", () => {
-    app.innerHTML = layoutMain(ProductPage, menus);
+    // Sử dụng template literals để kết hợp LayoutMain và ProductPage
+    app.innerHTML = LayoutMain(ProductPage);
 })
 
 router.on("/admin", () => {
-    app.innerHTML = ProductPage();
+    app.innerHTML = LayoutMain(Admin);
 })
 
 router.notFound(() => {

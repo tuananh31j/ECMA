@@ -1,12 +1,15 @@
 
 import Header from "./header.js";
 import Footer from "./footer.js";
-const layoutMain = (content, data) => {
+
+const LayoutMain = (content) => {
     return `
-    ${Header(menus)}
+    <div>
+    ${Header()}
     ${content()}
     ${Footer()}
+    </div>
     `;
 }
-
-export default layoutMain;
+export { Header, Footer };
+export default LayoutMain;

@@ -1,5 +1,5 @@
 import { menus } from "@/data";
-import Banner from '@/layout/banner.js';
+import Banner from '@/components/banner';
 const Header = () => {
     return `
     <header >

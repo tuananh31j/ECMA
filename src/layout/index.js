@@ -1,6 +1,6 @@
 
-import Header from "./header.js";
-import Footer from "./footer.js";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const LayoutMain = (content) => {
     return `

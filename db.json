@@ -1,0 +1,28 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Trà sữa socola",
+            "des": "trà sữa được làm từ sữa",
+            "price": "300000",
+            "img": "https://picsum.photos/200/250",
+            "createAt": "2023-01-02",
+            "updateAt": null
+        }
+    ],
+    "customers": [
+        {
+            "id": 1,
+            "name": "Tuấn Anh",
+            "email": "Anhntph30476@fpt.edu.vn",
+            "img": "https://picsum.photos/200/250",
+            "pass": "111222",
+            "role": "1",
+            "createAt": "2023-01-02",
+            "updateAt": null
+        }
+    ],
+    "comment": {
+        "name": "typicode"
+    }
+}

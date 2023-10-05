@@ -1,0 +1,247 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Trà sữa socola",
+            "des": "trà sữa được làm từ sữa",
+            "category_id": 1,
+            "sale": 20,
+            "view": 3,
+            "price": "300000",
+            "img": "https://picsum.photos/200/250",
+            "createAt": "2023-01-02",
+            "updateAt": null
+        },
+        {
+            "id": 2,
+            "name": "Trà sữa socola",
+            "des": "trà sữa được làm từ sữa",
+            "category_id": 1,
+            "sale": 20,
+            "view": 3,
+            "price": "300000",
+            "img": "https://picsum.photos/200/250",
+            "createAt": "2023-01-02",
+            "updateAt": null
+        },
+        {
+            "id": 3,
+            "name": "Trà sữa socola",
+            "des": "trà sữa được làm từ sữa",
+            "category_id": 1,
+            "sale": 20,
+            "view": 3,
+            "price": "300000",
+            "img": "https://picsum.photos/200/250",
+            "createAt": "2023-01-02",
+            "updateAt": null
+        },
+        {
+            "id": 4,
+            "name": "Trà sữa socola",
+            "des": "trà sữa được làm từ sữa",
+            "category_id": 1,
+            "sale": 20,
+            "view": 3,
+            "price": "300000",
+            "img": "https://picsum.photos/200/250",
+            "createAt": "2023-01-02",
+            "updateAt": null
+        },
+        {
+            "id": 5,
+            "name": "Trà sữa socola",
+            "des": "trà sữa được làm từ sữa",
+            "category_id": 1,
+            "sale": 20,
+            "view": 3,
+            "price": "300000",
+            "img": "https://picsum.photos/200/250",
+            "createAt": "2023-01-02",
+            "updateAt": null
+        },
+        {
+            "id": 6,
+            "name": "Trà sữa socola",
+            "des": "trà sữa được làm từ sữa",
+            "category_id": 1,
+            "sale": 20,
+            "view": 3,
+            "price": "300000",
+            "img": "https://picsum.photos/200/250",
+            "createAt": "2023-01-02",
+            "updateAt": null
+        },
+        {
+            "id": 7,
+            "name": "Trà sữa socola",
+            "des": "trà sữa được làm từ sữa",
+            "category_id": 1,
+            "sale": 20,
+            "view": 3,
+            "price": "300000",
+            "img": "https://picsum.photos/200/250",
+            "createAt": "2023-01-02",
+            "updateAt": null
+        },
+        {
+            "id": 8,
+            "name": "Trà sữa socola",
+            "des": "trà sữa được làm từ sữa",
+            "category_id": 1,
+            "sale": 20,
+            "view": 3,
+            "price": "300000",
+            "img": "https://picsum.photos/200/250",
+            "createAt": "2023-01-02",
+            "updateAt": null
+        },
+        {
+            "id": 9,
+            "name": "Trà sữa socolaaaa",
+            "des": "trà sữa được làm từ sữa",
+            "category_id": 1,
+            "sale": 20,
+            "view": 3,
+            "price": "300000",
+            "img": "https://picsum.photos/200/250",
+            "createAt": "2023-01-02",
+            "updateAt": null
+        },
+        {
+            "id": 10,
+            "name": "Trà sữa socolaxxx",
+            "des": "trà sữa được làm từ sữa",
+            "category_id": 1,
+            "sale": 20,
+            "view": 3,
+            "price": "300000",
+            "img": "https://picsum.photos/200/250",
+            "createAt": "2023-01-02",
+            "updateAt": null
+        }
+    ],
+    "customers": [
+        {
+            "id": 1,
+            "name": "Tuấn Anh",
+            "email": "Anhntph30476@fpt.edu.vn",
+            "img": "https://picsum.photos/200/250",
+            "pass": "111222",
+            "role": "1",
+            "createAt": "2023-01-02",
+            "updateAt": null
+        }
+    ],
+    "comments": [
+        {
+            "id": 1,
+            "content": "helo",
+            "customer": 1,
+            "product": 1,
+            "createAt": "2023-01-02",
+            "updateAt": null
+        }
+    ],
+    "sizes": [
+        {
+            "id": 1,
+            "name": "L",
+            "product": 1
+        }
+    ],
+    "banners": [
+        {
+            "id": 1,
+            "img_url": "https://picsum.photos/200/250",
+            "product": 1,
+            "menu": 1,
+            "name": "Trà sữa socola",
+            "createAt": "2023-01-02",
+            "updateAt": null
+        },
+        {
+            "id": 2,
+            "img_url": "https://picsum.photos/200/250",
+            "product": 1,
+            "menu": 2,
+            "name": "Trà sữa socola",
+            "createAt": "2023-01-02",
+            "updateAt": null
+        },
+        {
+            "id": 3,
+            "img_url": "https://picsum.photos/200/250",
+            "product": 1,
+            "menu": 3,
+            "name": "Trà sữa socola",
+            "createAt": "2023-01-02",
+            "updateAt": null
+        },
+        {
+            "id": 4,
+            "img_url": "https://picsum.photos/200/250",
+            "product": 1,
+            "menu": 4,
+            "name": "Trà sữa socola",
+            "createAt": "2023-01-02",
+            "updateAt": null
+        },
+        {
+            "id": 5,
+            "img_url": "https://picsum.photos/200/250",
+            "product": 1,
+            "menu": 5,
+            "name": "Trà sữa socola",
+            "createAt": "2023-01-02",
+            "updateAt": null
+        },
+        {
+            "id": 6,
+            "img_url": "https://picsum.photos/200/250",
+            "product": 1,
+            "menu": 6,
+            "name": "Trà sữa socola",
+            "createAt": "2023-01-02",
+            "updateAt": null
+        }
+    ],
+    "menus": [
+        {
+            "id": 1,
+            "path": "/",
+            "name": "Trang chủ"
+        },
+        {
+            "id": 2,
+            "path": "/shop",
+            "name": "Cửa hàng"
+        },
+        {
+            "id": 3,
+            "path": "/category",
+            "name": "Danh mục"
+        },
+        {
+            "id": 4,
+            "path": "/product",
+            "name": "Sản phẩm"
+        },
+        {
+            "id": 5,
+            "path": "/contact",
+            "name": "Liên hệ"
+        },
+        {
+            "id": 6,
+            "path": "/about",
+            "name": "Giới thiệu"
+        }
+    ],
+    "categorys": [
+        {
+            "id": 1,
+            "name": "Trà sữa"
+        }
+    ]
+}

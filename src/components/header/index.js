@@ -12,7 +12,7 @@ const Header = () => {
     return `
             <header>
             <div class="bg-red-700 flex justify-between p-4 px-10 items-center">
-                <div class="w-[248px] "><div class="w-20"><img src="./public/logo.png" alt=""></div></div>
+                <div class="w-[248px] "><div class="w-20"><img src="./public/img/logo.png" alt=""></div></div>
 
                 <div>
                     <form action="" method="post">

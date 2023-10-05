@@ -1,9 +1,9 @@
-import { products } from "../data";
+import { products } from "@/data";
 const ProductPage = () => {
     return `
     <div class="flex gap-5">
     ${products.map(item => {
-        return `
+        return /* html */ `
         
         <div>
             <a><img src="${item.image}" /></a>

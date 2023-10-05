@@ -1,16 +1,15 @@
 
 import Navigo from "navigo";
+const router = new Navigo("/", { linksSelector: "a", hash: true });
 
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
-
-const router = new Navigo("/", { linksSelector: "a", hash: true });
-
 let effects = [];
 let currentEffectOrder = 0;
 
 let rootComponent = null;
 let rootContainer = null;
+let rootLayout = null;
 
 let states = [];
 let currentStateOrder = 0;
@@ -25,11 +24,12 @@ const debounce = (fn, timeout = 100) => {
     };
 };
 
-const render = (component, container) => {
-    container.innerHTML = component();
+const render = (layout, container, component) => {
+    container.innerHTML = layout(component);
 
     rootComponent = component;
     rootContainer = container;
+    rootLayout = layout;
 
     effects.forEach((effect) => {
         effect.cb();
@@ -39,7 +39,7 @@ const render = (component, container) => {
 const rerender = debounce(() => {
     currentStateOrder = 0;
     currentEffectOrder = 0;
-    rootContainer.innerHTML = rootComponent();
+    rootContainer.innerHTML = rootLayout(rootComponent);
 
     effects.forEach((effect) => {
         // shouldRunEffect = true khi không truyền deps hoặc deps khác nhau
@@ -112,5 +112,4 @@ router.on("/*", () => { }, {
     },
 });
 
-export { render, useState, useEffect, router };
-export { $, $$, render };
+export { render, useState, useEffect, router, $, $$ };

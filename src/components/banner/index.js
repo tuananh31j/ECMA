@@ -1,8 +1,9 @@
-const Banner = () => {
+const Banner = (data) => {
     return `
-    <div>
-    <img src="https://picsum.photos/600/250" class="w-full h-56 object-cover" />
-</div>
+    <!-- banner -->
+            <div>
+                <img src="${data.img_url}" class="w-full h-[500px] object-contain" alt="">
+            </div>
     `
 }
 

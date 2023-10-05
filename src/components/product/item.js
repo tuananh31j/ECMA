@@ -13,7 +13,7 @@ const ItemProduct = (data) => {
 
             </div>
             <button
-                class="text-black font-semibold bg-white border-2 mt-auto flex-shrink-0 border-red-700 rounded-md hover:bg-red-700 hover:text-white p-4 ">Mua
+                class="text-red-700 font-semibold bg-white border-2 mt-auto flex-shrink-0 border-red-700 rounded-md hover:bg-red-700 hover:text-white p-4 ">Mua
                 Ngay
             </button>
         </div>

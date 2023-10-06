@@ -6,9 +6,9 @@ const menus = [
 ]
 
 const products = [
-    { id: 1, name: "Product 1", image: "https://picsum.photos/200/250 ", price: 1000, categoryId: 1 },
-    { id: 2, name: "Product 2", image: "https://picsum.photos/200/250 ", price: 2000, categoryId: 2 },
-    { id: 3, name: "Product 3", image: "https://picsum.photos/200/250 ", price: 3000, categoryId: 3 }
+    { id: 1, name: "Product 1", image: "ko ", price: 1000, categoryId: 1 },
+    { id: 2, name: "Product 2", image: "ko ", price: 2000, categoryId: 2 },
+    { id: 3, name: "Product 3", image: "ko ", price: 3000, categoryId: 3 }
 ]
 const categories = [
     { id: 1, name: "Category 1" },

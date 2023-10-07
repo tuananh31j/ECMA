@@ -7,7 +7,7 @@ const app = $('#app');
 routersClient.map(item => {
     router.on(item.path, () => {
         if (item.layout == "") {
-            render(LayoutMain, app, item.element)
+            render(() => LayoutMain(item.element), app)
         } else {
             render(item.element, app)
         }

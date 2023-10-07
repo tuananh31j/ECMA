@@ -5,7 +5,6 @@ let currentEffectOrder = 0;
 
 let rootComponent = null;
 let rootContainer = null;
-let rootLayout = null;
 
 let states = [];
 let currentStateOrder = 0;
@@ -20,12 +19,11 @@ const debounce = (fn, timeout = 100) => {
     };
 };
 
-const render = (layout, container, component) => {
-    container.innerHTML = layout(component);
+const render = (component, container) => {
+    container.innerHTML = component();
 
     rootComponent = component;
     rootContainer = container;
-    rootLayout = layout;
 
     effects.forEach((effect) => {
         effect.cb();
@@ -35,7 +33,7 @@ const render = (layout, container, component) => {
 const rerender = debounce(() => {
     currentStateOrder = 0;
     currentEffectOrder = 0;
-    rootContainer.innerHTML = rootLayout(rootComponent);
+    rootContainer.innerHTML = rootComponent();
 
     effects.forEach((effect) => {
         // shouldRunEffect = true khi không truyền deps hoặc deps khác nhau

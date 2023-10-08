@@ -19,8 +19,8 @@ const debounce = (fn, timeout = 100) => {
     };
 };
 
-const render = (component, container) => {
-    container.innerHTML = component();
+const render = (component, container, data) => {
+    container.innerHTML = component(data);
 
     rootComponent = component;
     rootContainer = container;

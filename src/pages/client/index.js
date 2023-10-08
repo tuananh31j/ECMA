@@ -5,5 +5,6 @@ import Admin from "./admin";
 import Register from "./register";
 import ContactPage from "./contact";
 import Login from "./logIn";
+import ProDetailPage from "./productDetail";
 
-export { HomePage, AboutPage, ProductPage, Admin, Login, Register, ContactPage };
+export { HomePage, AboutPage, ProductPage, Admin, Login, Register, ContactPage, ProDetailPage };

@@ -1,12 +1,8 @@
 import { getAll } from "@/api";
 import Banner from '@/components/banner';
 import { useState, useEffect } from "@/utilities";
+let user = localStorage.getItem("user") ?? null
 const Header = () => {
-    const [user, setUser] = useState(false);
-    useEffect(() => {
-        setUser(localStorage.getItem("user"))
-
-    }, [])
     return `
             <header>
             <div class="bg-red-700 flex justify-between p-4 px-10 items-center">

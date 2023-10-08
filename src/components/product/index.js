@@ -8,7 +8,7 @@ const ListProNew = () => {
         getAll("products")
             .then(res => res.data)
             .then(data => data.sort((a, b) => b.id - a.id))
-            .then(result => { console.log(result); setProducts(result) })
+            .then(result => setProducts(result.splice(0, 8)))
     }, [])
     return `
             <div class="px-10 my-20">

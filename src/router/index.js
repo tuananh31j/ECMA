@@ -1,4 +1,4 @@
-import { HomePage, AboutPage, ProductPage, Admin, LogIn, Register } from "@/pages/client";
+import { HomePage, AboutPage, ProductPage, Admin, Login, Register, ContactPage } from "@/pages/client";
 
 const routersClient = [
     {
@@ -17,8 +17,13 @@ const routersClient = [
         layout: ''
     },
     {
-        path: "/logIn",
-        element: LogIn,
+        path: "/contact",
+        element: ContactPage,
+        layout: ''
+    },
+    {
+        path: "/login",
+        element: Login,
         layout: 'auth'
     },
     {
@@ -26,6 +31,6 @@ const routersClient = [
         element: Register,
         layout: 'auth'
     },
-    
+
 ]
-export {routersClient};
+export { routersClient };

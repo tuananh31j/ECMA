@@ -2,12 +2,10 @@ import { getAll } from "@/api";
 import Banner from '@/components/banner';
 import { useState, useEffect } from "@/utilities";
 const Header = () => {
-    const [menus, setMenus] = useState([]);
+    const [user, setUser] = useState(false);
     useEffect(() => {
-        (async () => {
-            const response = await getAll("menus");
-            setMenus(response.data);
-        })()
+        setUser(localStorage.getItem("user"))
+
     }, [])
     return `
             <header>
@@ -25,37 +23,42 @@ const Header = () => {
                     </form>
                 </div>
 
-                <div>
-                    <div class="flex gap-4 items-center hidden">
-                        <span class="text-white italic overflow-hidden  w-50 h-6 ">Xin chào! Nguyễn Tuấn Anh</span>
-                        <img src="https://picsum.photos/200/250" class="w-10 h-10 border rounded-full"/>
-                    </div>
-                    <div class="flex gap-4  w-[248px] justify-end">
-                        <a href="/logIn" class="border-2 p-2 text-white rounded-md">Đăng nhập</a>
-                        <a href="/register" class="border-2 p-2 text-white bg-slate-600 rounded-md">Đăng
-                            ký</a>
-                    </div>
-                </div>
+                ${user
+            ? `
+                        <div>
+                            <div class="flex gap-4 items-center">
+                                <span class="text-white italic overflow-hidden  w-50 h-6 ">Xin chào! Nguyễn Tuấn Anh</span>
+                                <img src="https://picsum.photos/200/250" class="w-10 h-10 border rounded-full"/>
+                            </div>
+               
+                        </div>`
+            : `
+                        <div class="flex gap-4  w-[248px] justify-end">
+                            <a href="/login" class="border-2 p-2 text-white rounded-md">Đăng nhập</a>
+                            <a href="/register" class="border-2 p-2 text-white bg-slate-600 rounded-md">Đăngký</a>
+                        </div>
+                    `
+        }
             </div>
 
             <nav>
-                <ul class="flex justify-between px-5 my-3 font-bold text-red-700 items-center">
-                    
-    ${menus.map((item, index) => {
-        if (index == 0) {
-            return `
-                        <li><a href="${item.path}"
-                        class="hover:bg-amber-900 transition-all ease-in-out hover:text-white rounded-md p-2 flex items-center gap-4 uppercase"><i
+            <ul class="flex justify-between px-5 my-3 font-bold text-red-700">
+            <li><a href="/"
+                    class="hover:bg-amber-900 hover:text-white rounded-md p-2 flex items-center gap-4"><i
                         class="fa-solid fa-house"></i>
-                        ${item.name}</a></li>
-                    `
-        }
-        return `
-                <li><a href="${item.path}" class="hover:bg-amber-900 transition-all ease-in hover:text-white rounded-md p-2 uppercase">${item.name}</a></li>
-                `
-    }).join("")}
-                    
-                </ul>
+                    TRANG
+                    CHỦ</a></li>
+            <li><a href="/shop" class="hover:bg-amber-900 hover:text-white rounded-md p-2">CỬA
+                    HÀNG</a></li>
+            <li><a href="/category" class="hover:bg-amber-900 hover:text-white rounded-md p-2">DANH
+                    MỤC</a></li>
+            <li><a href="product" class="hover:bg-amber-900 hover:text-white rounded-md p-2">SẢN
+                    PHẨM</a></li>
+            <li><a href="contact" class="hover:bg-amber-900 hover:text-white rounded-md p-2">LIÊN
+                    HỆ</a></li>
+            <li><a href="about" class="hover:bg-amber-900 hover:text-white rounded-md p-2">GIỚI
+                    THIỆU</a></li>
+        </ul>
             </nav>
 
             <div>

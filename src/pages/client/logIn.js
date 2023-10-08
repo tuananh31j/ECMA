@@ -1,4 +1,47 @@
-const LogIn = () => {
+import { render, useState, useEffect, router, $, $$, isValidate } from "@/utilities";
+import { getAll } from "../../api";
+const Login = () => {
+    const [err, setErr] = useState([]);
+    useEffect(() => {
+        const errMessage = {};
+        let dataForm = {}
+
+        const formLogin = $("#formLogin");
+        const emailInput = $(".emailInput");
+        const passInput = $(".passInput");
+        const inputAll = Array.from(formLogin.querySelectorAll("input"));
+
+        formLogin.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const vali = inputAll.find(item => item.value == "");
+            let flag = false;
+            if (vali) {
+                errMessage.email = isValidate(emailInput, "Chưa nhập địa chỉ email!");
+                errMessage.pass = isValidate(passInput, "Chưa nhập mật khẩu!");
+                setErr(errMessage);
+            } else if (!vali) {
+                getAll("customers")
+                    .then((res) => res.data)
+                    .then(data => data.find(user => user.email == emailInput.value || user.pass == passInput.value))
+                    .then(user => {
+                        if (user) {
+                            flag = user.email == emailInput.value && user.pass == passInput.value
+                        }
+                        console.log(user);
+                        if (flag) {
+                            dataForm = JSON.stringify(user);
+                            localStorage.setItem("user", dataForm);
+                            setErr({})
+                            router.navigate("/")
+                        } else {
+                            errMessage.email = user?.email == emailInput.value ? "" : "Địa chỉ email không trùng khớp!";
+                            errMessage.pass = user?.pass == passInput.value ? "" : "Mật khẩu không đúng!";
+                            setErr(errMessage);
+                        }
+                    })
+            }
+        })
+    }, [err])
     return `
             <div
             class="bg-[url('../../public/img/backgroundHignland.jpg')] relative min-h-screen w-full bg-no-repeat bg-cover">
@@ -9,23 +52,23 @@ const LogIn = () => {
                     <div>
                         <h1 class="text-center font-semibold text-xl mb-8">Đăng nhập</h1>
                     </div>
-                    <form action="">
+                    <form id="formLogin" action="">
                         <div class="h-[110px] mb-6">
                             <lable for="email" class="w-full">Địa chỉ email <span
                                     class="text-red-700">*</span></lable>
-                            <input class="border-2 rounded-md my-3  p-4 w-full"
+                            <input class="border-2 rounded-md my-3 emailInput  p-4 w-full"
                                 placeholder="Nhập địa chỉ email" type="email" name="email">
-                            <p class="text-red-700">Lỗi</p>
+                            <p class="text-red-700">${err.email ?? ""}</p>
                         </div>
                         <div class="h-[110px] mb-6">
                             <lable for="pass" class="w-full my-3">Mật khẩu <span
                                     class="text-red-700">*</span></lable>
-                            <input class="border-2 rounded-md my-3  p-4 w-full"
+                            <input class="border-2 rounded-md my-3 passInput  p-4 w-full"
                                 placeholder="Nhập mật khẩu" type="password" name="pass">
-                            <p class="text-red-700">Lỗi</p>
+                            <p class="text-red-700">${err.pass ?? ""}</p>
                         </div>
                         <div class="flex flex-col gap-1 justify-center">
-                            <button type="submit"
+                            <button 
                                 class="bg-red-700 border-2 mb-3 border-red-700 rounded-md p-4 text-white font-semibold hover:opacity-80 active:translate-y-[2px] transition-all ease-in-out">Đăng
                                 nhập</button>
                             <a href="" class="text-center text-red-700 hover:underline">Đăng ký</a>
@@ -38,4 +81,4 @@ const LogIn = () => {
         </div>
     `
 }
-export default LogIn;
+export default Login;

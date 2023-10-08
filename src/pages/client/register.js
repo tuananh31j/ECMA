@@ -13,7 +13,7 @@ const Register = () => {
         const pass = $(".pass");
         const phone = $(".phone");
         const registerForm = $("#register");
-        const inputAll = $$("input");
+        const inputAll = registerForm.querySelectorAll("input");
 
         const errMessage = {};
         let dataForm = {};
@@ -36,7 +36,7 @@ const Register = () => {
                     email: email.value,
                     pass: pass.value,
                     role: 0,
-                    createAt: new Date("Y-m-d"),
+                    createAt: new Date(),
                     updateAt: null
                 }
                 console.log("object");

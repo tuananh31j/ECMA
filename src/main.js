@@ -1,16 +1,14 @@
 import { routersClient } from "@/router";
 import LayoutMain from "@/layout/index.js";
+import { layoutAuth } from "./layout";
 import { render, useState, useEffect, $, $$, router } from "@/utilities";
 
 const app = $('#app');
+const root = $('#root');
 
 routersClient.map(item => {
     router.on(item.path, () => {
-        if (item.layout == "") {
-            render(() => LayoutMain(item.element), app)
-        } else {
-            render(item.element, app)
-        }
+        LayoutMain(() => render(item.element, app));
     })
 })
 

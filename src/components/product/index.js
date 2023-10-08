@@ -10,10 +10,12 @@ const ListProNew = () => {
             const productsData = response.data.sort((a, b) => {
                 return b.id - a.id;
             })
-            setProducts(productsData.slice(0, 8));
+            setProducts(productsData);
+            console.log(productsData, 'd');
         })()
 
     }, [])
+    console.log(products);
     return `
             <div class="px-10 my-20">
                 <h1 class="text-3xl my-10 font-bold">Sản phẩm mới nhất</h1>

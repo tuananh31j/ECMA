@@ -5,9 +5,9 @@ import { $ } from "../utilities";
 const headerElement = $("#header");
 const footerElement = $("#footer");
 
-const LayoutMain = async (content) => {
+const LayoutMain = (content) => {
     headerElement.innerHTML = Header();
-    await content();
+    content();
     footerElement.innerHTML = Footer();
 }
 const layoutAuth = async (content) => {

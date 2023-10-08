@@ -7,8 +7,8 @@ const ProDetailPage = ({ id }) => {
     useEffect(() => {
         get("products", id)
             .then((res) => res.data)
-            .then(data => setPro(data))
-    }, [])
+            .then(data => { console.log(data, "s"); setPro(data) })
+    }, [pro])
     console.log(pro);
     return /*html*/ `
             <div>

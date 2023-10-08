@@ -107,18 +107,6 @@
       "img": "https://picsum.photos/200/250",
       "createAt": "2023-01-02",
       "updateAt": null
-    },
-    {
-      "id": 10,
-      "name": "Trà sữa socolaxxx",
-      "des": "trà sữa được làm từ sữa",
-      "category_id": 1,
-      "sale": 20,
-      "view": 3,
-      "price": "300000",
-      "img": "https://picsum.photos/200/250",
-      "createAt": "2023-01-02",
-      "updateAt": null
     }
   ],
   "customers": [
@@ -318,6 +306,15 @@
       "createAt": "2023-10-08T13:31:10.230Z",
       "updateAt": null,
       "id": 24
+    },
+    {
+      "name": "binh",
+      "email": "binh@gmail.com",
+      "pass": "1122",
+      "role": 0,
+      "createAt": "2023-10-08T16:16:19.030Z",
+      "updateAt": null,
+      "id": 25
     }
   ],
   "comments": [

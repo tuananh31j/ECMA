@@ -3,6 +3,12 @@ import Banner from '@/components/banner';
 import { useState, useEffect } from "@/utilities";
 let user = localStorage.getItem("user") ?? null
 const Header = () => {
+    const [log, setLog] = useState(false);
+    useEffect(() => {
+        if (localStorage.getItem("user")) {
+            setLog(true)
+        }
+    }, [])
     return `
             <header>
             <div class="bg-red-700 flex justify-between p-4 px-10 items-center">
@@ -38,7 +44,7 @@ const Header = () => {
             </div>
 
             <nav>
-            <ul class="flex justify-between px-5 my-3 font-bold text-red-700">
+            <ul class="flex justify-between px-5 my-3 items-center font-bold text-red-700">
             <li><a href="/"
                     class="hover:bg-amber-900 hover:text-white rounded-md p-2 flex items-center gap-4"><i
                         class="fa-solid fa-house"></i>

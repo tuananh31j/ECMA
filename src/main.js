@@ -11,7 +11,7 @@ router.on("/about", () => LayoutMain(() => render(AboutPage, app)))
 router.on("/product", () => LayoutMain(() => render(ProductPage, app)))
 router.on("/login", () => layoutAuth(() => render(Login, app)))
 router.on("/register", () => layoutAuth(() => render(Register, app)))
-router.on("/detail/:id", ({ data }) => LayoutMain(() => render(ProDetailPage, app, data)))
+router.on("/product/:id", ({ data }) => LayoutMain(() => render(ProDetailPage, app, data)))
 router.on("/admin", () => LayoutMain(() => render(HomePage, app)))
 router.notFound(() => { app.innerHTML = "not found!" })
 router.resolve();

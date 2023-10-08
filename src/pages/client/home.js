@@ -1,4 +1,4 @@
-import { ListProNew } from "@/components/product";
+import ItemProduct from "../../components/product/item";
 import { get, getAll } from "@/api";
 import { useEffect, useState } from "@/utilities";
 import Banner from "@/components/banner";
@@ -12,6 +12,13 @@ const HomePage = () => {
             const bannerData = response.data.find(item => item.menu == 1);
             setBanner(bannerData);
         })()
+    }, [])
+    const [products, setProducts] = useState([]);
+    useEffect(() => {
+        getAll("products")
+            .then(res => res.data)
+            .then(data => data.sort((a, b) => b.id - a.id))
+            .then(result => setProducts(result.splice(0, 8)))
     }, [])
     return `
     <div class="main-content">
@@ -53,7 +60,12 @@ const HomePage = () => {
 
     <!-- products -->
     <!-- new -->
-    ${ListProNew()}
+    <div class="px-10 my-20">
+                <h1 class="text-3xl my-10 font-bold">Sản phẩm mới nhất</h1>
+                <div class="grid grid-cols-4 gap-5 text-center">
+                    ${products.map((item) => ItemProduct(item)).join("")}
+                </div>
+            </div>
 </div>
     `
 

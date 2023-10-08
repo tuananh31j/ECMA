@@ -5,17 +5,11 @@ import { getAll, get, add, remove, update } from "@/api"
 const ListProNew = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        (async () => {
-            const response = await getAll("products");
-            const productsData = response.data.sort((a, b) => {
-                return b.id - a.id;
-            })
-            setProducts(productsData);
-            console.log(productsData, 'd');
-        })()
-
+        getAll("products")
+            .then(res => res.data)
+            .then(data => data.sort((a, b) => b.id - a.id))
+            .then(result => { console.log(result); setProducts(result) })
     }, [])
-    console.log(products);
     return `
             <div class="px-10 my-20">
                 <h1 class="text-3xl my-10 font-bold">Sản phẩm mới nhất</h1>

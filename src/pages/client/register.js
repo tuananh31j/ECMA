@@ -42,7 +42,8 @@ const Register = () => {
                 console.log("object");
 
                 add("customers", dataForm)
-                    .then(() => { router.navigate("/logIn") })
+                    .then(() => { router.navigate("/login") })
+                    .then(() => console.log("ok"))
 
             }
 

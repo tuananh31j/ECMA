@@ -1,21 +1,55 @@
 import { useEffect, useState } from "@/utilities";
 import { add } from "@/api";
-import { $ } from "@/utilities";
+import { $, $$, isValidate } from "@/utilities/core";
+import { router } from "@/utilities";
 
 
 const Register = () => {
-
+    const [err, setErr] = useState([]);
     useEffect(() => {
         const btn = $(".btn-submit");
         const user = $(".userName");
         const email = $(".emailName");
         const pass = $(".pass");
         const phone = $(".phone");
-        btn.addEventlistener("submit", (e) => {
+        const registerForm = $("#register");
+        const inputAll = $$("input");
+
+        const errMessage = {};
+        let dataForm = {};
+        registerForm.addEventListener("submit", (e) => {
             e.preventDefault();
+            let arrInputAll = Array.from(inputAll);
+            let vali = arrInputAll.find(element => element.value === '');
+            if (vali) {
+                errMessage.name = isValidate(user, "Chưa điền họ tên!");
+                errMessage.email = isValidate(email, "Chưa điền đại chỉ email!");
+                errMessage.pass = isValidate(pass, "Chưa điền mật khẩu!");
+                errMessage.phone = isValidate(phone, "Chưa điền số điện thoại!");
+                setErr(errMessage);
+                console.log(vali);
+
+
+            } else {
+                dataForm = {
+                    name: user.value,
+                    email: email.value,
+                    pass: pass.value,
+                    role: 0,
+                    createAt: new Date("Y-m-d"),
+                    updateAt: null
+                }
+                console.log("object");
+
+                add("customers", dataForm)
+                    .then(() => { router.navigate("/logIn") })
+
+            }
 
         })
-    }, [])
+    }, [err])
+
+    console.log(err);
     return `
             <div
             class="bg-[url('../../public/img/bnlogin.jpg')] relative min-h-screen w-full bg-no-repeat bg-cover">
@@ -26,7 +60,7 @@ const Register = () => {
                     <div>
                         <h1 class="text-center font-semibold text-xl mb-8">Đăng ký</h1>
                     </div>
-                    <form>
+                    <form id="register">
                         <div class="flex gap-5">
                             <div class="">
                                 <div class="h-[110px] mb-6">
@@ -34,14 +68,14 @@ const Register = () => {
                                             class="text-red-700">*</span></lable>
                                     <input class="userName border-2 rounded-md my-3  p-4 w-full"
                                         placeholder="Nhập họ tên" type="text" name="name">
-                                    <p class="text-red-700">Lỗi</p>
+                                    <p class="text-red-700">${err.name ?? ""}</p>
                                 </div>
                                 <div class="h-[110px] mb-6">
                                     <lable for="email" class="w-full">Địa chỉ email <span
                                             class="text-red-700">*</span></lable>
                                     <input class="emailName border-2 rounded-md my-3  p-4 w-full"
                                         placeholder="Nhập địa chỉ email" type="email" name="email">
-                                    <p class="text-red-700">Lỗi</p>
+                                    <p class="text-red-700">${err.email ?? ""}</p>
                                 </div>
 
                             </div>
@@ -51,14 +85,14 @@ const Register = () => {
                                             class="text-red-700">*</span></lable>
                                     <input class="phone border-2 rounded-md my-3  p-4 w-full"
                                         placeholder="Nhập số điện thoại" type="text" name="phone">
-                                    <p class="text-red-700">Lỗi</p>
+                                    <p class="text-red-700">${err.phone ?? ""}</p>
                                 </div>
                                 <div class="h-[110px] mb-6">
                                     <lable for="pass" class="w-full my-3">Mật khẩu <span
                                             class="text-red-700">*</span></lable>
                                     <input class="pass border-2 rounded-md my-3  p-4 w-full"
                                         placeholder="Nhập mật khẩu" type="password" name="pass">
-                                    <p class="text-red-700">Lỗi</p>
+                                    <p class="text-red-700">${err.pass ?? ""}</p>
                                 </div>
                             </div>
                         </div>

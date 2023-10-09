@@ -6,21 +6,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
 
-    <header class="flex gap-3 items-center">
-        <div>
-            <img src="https://picsum.photos/55/55" alt="">
-        </div>
-        <nav>
-            <ul class="flex gap-5">
-                <li><a href="" class="hover:bg-slate-600 hover:text-white">Home</a></li>
+    <div class="relative ">
+        <div class=" overflow-y-scroll overflow-x-visible bg-red-700 fixed h-full">
+            <div
+                class="transition-all  ease-linear duration-300 fixed left-[294px] me-4 top-[20px] rounded-md bg-red-800 z-10 p-4">
+                <i class="fa-solid fa-angles-left text-white"></i>
+            </div>
+            <h2 class="text-center pe-3 mx-auto mb-4 font-semibold text-4xl">Hignland
+                coffee</h2>
 
-            </ul>
-        </nav>
-    </header>
+            <nav class="flex flex-col mx-5 ">
+                <ul>
+                    <!-- user -->
+                    <li>
+                        <div class="flex gap-2  items-center">
+                            <div class=" h-10 w-10">
+                                <img src="https://picsum.photos/200/250"
+                                    class="rounded-full object-cover  w-full h-full" alt="">
+
+                            </div>
+                            <div class="flex gap-11 items-center">
+                                <div class="">
+                                    <p class="m-0 text-white">
+                                        nguyễn tuấn anh
+                                    </p>
+                                    <p class="font-light m-0 italic text-white">
+                                        tuan@gmail.com
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </li>
+                    <!-- Trang chủ -->
+                    <a class="text-white   " href="s">
+                        <li class="mt-4 hover:bg-amber-950 hover:text-white  hover:rounded-lg ">
+                            <i class="hover:text-white fa-solid fa-house text-white"></i>
+                            Trang chủ
+                        </li>
+                    </a>
+                    <!-- điều khiển -->
+                    <a class="text-white   " href="index.php">
+                        <li class="mt-3 hover:bg-amber-950 hover:text-white  hover:rounded-lg ">
+                            <i class="hover:text-white fa-solid fa-gauge text-white"></i>
+                            Thống kê
+                        </li>
+                    </a>
+                    <!-- đơn hàng -->
+                    <a class="text-white  " href="index.php?url=order&act=list">
+                        <li class="mt-3 hover:bg-amber-950 hover:text-white  hover:rounded-lg">
+                            <i class="hover:text-white fa-solid fa-box text-white"></i>
+                            Đơn hàng
+                        </li>
+                    </a>
+                    <!-- Danh mục -->
+                    <a class="text-white  " href="index.php?url=category&act=list">
+                        <li class="mt-3 hover:bg-amber-950 hover:text-white  hover:rounded-lg">
+                            <i class="hover:text-white fa-solid fa-hashtag text-white"></i>
+                            Danh mục
+                        </li>
+                    </a>
+                    <!-- size -->
+                    <a class="text-white  " href="index.php?url=size&act=list">
+                        <li class="mt-3 hover:bg-amber-950 hover:text-white  hover:rounded-lg">
+                            <i class="hover:text-white fa-solid fa-ruler-combined text-white"></i>
+                            Kích cỡ
+                        </li>
+                    </a>
+                    <!-- Sản phẩm -->
+                    <a class="text-white  " href="index.php?url=product&act=list">
+                        <li class="mt-3 hover:bg-amber-950 hover:text-white  hover:rounded-lg">
+                            <i class="hover:text-white fa-solid fa-mug-saucer text-white"></i>
+                            Sản phẩm
+                        </li>
+                    </a>
+                    <!-- cửa hàng -->
+                    <a class="text-white  " href="index.php?url=shop&act=list">
+                        <li class="mt-3 hover:bg-amber-950 hover:text-white  hover:rounded-lg">
+                            <i class="hover:text-white fa-solid fa-shop text-white"></i>
+                            Cửa hàng
+                        </li>
+                    </a>
+                    <!-- khách hàng -->
+                    <a class="text-white  " href="index.php?url=customer&act=list">
+                        <li class="mt-3 hover:bg-amber-950 hover:text-white  hover:rounded-lg">
+                            <i class="hover:text-white fa-solid fa-people-group text-white"></i>
+                            Khách hàng
+                        </li>
+                    </a>
+                    <!-- Bình luận -->
+                    <a class="text-white  " href="index.php?url=comment&act=list">
+                        <li class="mt-3 hover:bg-amber-950 hover:text-white  hover:rounded-lg">
+                            <i class="hover:text-white fa-solid fa-comments text-white"></i>
+                            Bình luận
+                        </li>
+                    </a>
+                    <!-- Đánh giá -->
+                    <a class="text-white  " href="index.php?url=feedback&act=list">
+                        <li class="mt-3 hover:bg-amber-950 hover:text-white  hover:rounded-lg">
+                            <i class="hover:text-white fa-solid fa-message"></i> Đánh
+                            giá
+                        </li>
+                    </a>
+                    <!-- Phản hồi -->
+                    <a class="text-white  " href="index.php?url=contact">
+                        <li class="mt-3 hover:bg-amber-950 hover:text-white  hover:rounded-lg">
+                            <i class="hover:text-white fa-solid fa-envelope text-white"></i>
+                            Liên hệ
+                        </li>
+                    </a>
+                    <!-- Banner -->
+                    <a class="text-white  " href="index.php?url=banner&act=list">
+                        <li class="mt-3 hover:bg-amber-950 hover:text-white  hover:rounded-lg">
+                            <i class="hover:text-white fa-solid fa-mountain-sun"></i>
+                            Banner
+                        </li>
+                    </a>
+                </ul>
+            </nav>
+            <a class=" text-white  hover:bg-amber-950 hover:text-white  hover:rounded-lg p-3"
+                href="index.php?url=logout"><i
+                    class="hover:text-white fa-solid fa-right-from-bracket"></i>
+                Đăng xuất</a>
+        </div>
+        <!-- content -->
+        <div class="absolute left-96 bg-red-700">hâ</div>
+    </div>
 </body>
 
 </html>

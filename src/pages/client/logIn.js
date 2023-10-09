@@ -32,7 +32,7 @@ const Login = () => {
                             dataForm = JSON.stringify(user);
                             localStorage.setItem("user", dataForm);
                             setErr({})
-                            router.navigate("/")
+                            window.location.href = "/"
                         } else {
                             errMessage.email = user?.email == emailInput.value ? "" : "Địa chỉ email không trùng khớp!";
                             errMessage.pass = user?.pass == passInput.value ? "" : "Mật khẩu không đúng!";

@@ -30,6 +30,7 @@ const Header = () => {
                         <div>
                             <div class="flex gap-4 items-center">
                                 <span class="text-white italic overflow-hidden  w-50 h-6 ">Xin chào! Nguyễn Tuấn Anh</span>
+                                <a href="/admin/dashboard">Admin</a>
                                 <img src="https://picsum.photos/200/250" class="w-10 h-10 border rounded-full"/>
                             </div>
                

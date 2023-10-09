@@ -4,6 +4,7 @@ import { getAll, get, add, remove, update } from "@/api"
 
 const ListProNew = () => {
 
+    console.log(products);
     return `
             
     `

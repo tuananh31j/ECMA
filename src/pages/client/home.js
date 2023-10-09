@@ -2,10 +2,12 @@ import ItemProduct from "../../components/product/item";
 import { get, getAll } from "@/api";
 import { useEffect, useState } from "@/utilities";
 import Banner from "@/components/banner";
+import { ListProNew } from "../../components/product";
 
 
 const HomePage = () => {
     const [banner, setBanner] = useState('');
+
     useEffect(() => {
         (async () => {
             const response = await getAll("banners");
@@ -13,13 +15,16 @@ const HomePage = () => {
             setBanner(bannerData);
         })()
     }, [])
+
     const [products, setProducts] = useState([]);
+
     useEffect(() => {
         getAll("products")
             .then(res => res.data)
             .then(data => data.sort((a, b) => b.id - a.id))
             .then(result => setProducts(result.splice(0, 8)))
     }, [])
+
     return `
     <div class="main-content">
     <!-- banner -->

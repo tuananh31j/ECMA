@@ -11,7 +11,7 @@ const Dashboard = () => {
             menuElement.classList.toggle("-translate-x-full");
             menuButton.classList.toggle("-translate-x-[310px]");
             menuButton.classList.toggle("rotate-180");
-            contentElement.classList.toggle("left-3");
+            contentElement.classList.toggle("ms-3");
 
 
         })
@@ -147,19 +147,4 @@ const Dashboard = () => {
 export default Dashboard;
 
 
-const elementMenuParent = document.querySelector("#menuParent")
-const elementMenuChild = document.querySelector("#menuChild")
-const elementMenu = document.querySelector("#handleMenu")
 
-
-
-function handleMenu() {
-    elementMenuParent.classList.toggle("ms-[-300px]")
-    elementMenuParent.classList.toggle("me-44")
-
-    elementMenu.classList.toggle("ms-[-300px]")
-    elementMenu.classList.toggle("rotate-180")
-
-
-
-}

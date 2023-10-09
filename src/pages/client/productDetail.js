@@ -1,9 +1,10 @@
 import { get } from "@/api";
 import { useEffect, useState } from "@/utilities";
 
+
 const ProDetailPage = ({ id }) => {
     const [pro, setPro] = useState({});
-    console.log(id);
+    console.log(id, "id");
     useEffect(() => {
         get("products", id)
             .then((res) => res.data)

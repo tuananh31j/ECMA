@@ -3,10 +3,18 @@ import { get, getAll } from "@/api";
 import { useEffect, useState } from "@/utilities";
 import Banner from "@/components/banner";
 import { ListProNew } from "../../components/product";
+import { products } from "../../data";
 
 
 const HomePage = () => {
-    const [banner, setBanner] = useState('');
+    const [banner, setBanner] = useState([]);
+    const [products, setProducts] = useState([])
+    useEffect(() => {
+        getAll("products")
+            .then(res => res.data)
+            .then(data => data.sort((a, b) => b.id - a.id))
+            .then(result => setProducts(result.splice(0, 8)))
+    }, [])
 
     useEffect(() => {
         (async () => {
@@ -15,16 +23,12 @@ const HomePage = () => {
             setBanner(bannerData);
         })()
     }, [])
+    console.log(products, 'pri');
+    console.log(banner, 'bn');
 
-    const [products, setProducts] = useState([]);
 
-    useEffect(() => {
-        getAll("products")
-            .then(res => res.data)
-            .then(data => data.sort((a, b) => b.id - a.id))
-            .then(result => setProducts(result.splice(0, 8)))
-    }, [])
 
+    console.log(products);
     return `
     <div class="main-content">
     <!-- banner -->

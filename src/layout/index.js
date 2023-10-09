@@ -8,9 +8,11 @@ const footerElement = $("#footer");
 const root = $("#root");
 
 const LayoutMain = async (content) => {
-    await content();
 
+    console.log("h");
     headerElement.innerHTML = Header();
+    await content();
+    console.log("b");
     footerElement.innerHTML = Footer();
 }
 const layoutAuth = async (content) => {

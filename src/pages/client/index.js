@@ -6,5 +6,5 @@ import Register from "./register";
 import ContactPage from "./contact";
 import Login from "./logIn";
 import ProDetailPage from "./productDetail";
-
-export { HomePage, AboutPage, ProductPage, Admin, Login, Register, ContactPage, ProDetailPage };
+import Notfound from "./notFound";
+export { HomePage, AboutPage, ProductPage, Admin, Login, Register, ContactPage, ProDetailPage, Notfound };

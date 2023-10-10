@@ -3,7 +3,7 @@ import { get, getAll } from "@/api";
 import { useEffect, useState } from "@/utilities";
 import Banner from "@/components/banner";
 import { ListProNew } from "../../components/product";
-import { products } from "../../data";
+import Image from "../../asset";
 
 
 const HomePage = () => {
@@ -36,7 +36,7 @@ const HomePage = () => {
     <!-- dịch vụ -->
     <div class="flex  justify-between px-5 my-5">
         <div class="text-center w-56">
-            <img class="mx-auto my-4" src="./img/tk.jpg" alt="" class="">
+            <img class="mx-auto my-4" src="${Image.tk}" alt="" class="">
             <h4 class="font-semibold text-xl">Mua hàng siêu
                 tiết kiệm</h4>
             <p class="mt-1 font-light text-sm">Các sản phẩm luôn được bán với giá ưu đãi nhất
@@ -44,7 +44,7 @@ const HomePage = () => {
         </div>
 
         <div class="text-center w-56">
-            <img class="mx-auto my-4" src="./img/khuyenmai.jpg" alt="" class="">
+            <img class="mx-auto my-4" src="${Image.km}" alt="" class="">
             <h4 class="font-semibold text-xl">Khuyến mãi cực
                 lớn</h4>
             <p class="mt-1 font-light text-sm">Được hưởng chương trình và các khuyến mãi cực
@@ -52,14 +52,14 @@ const HomePage = () => {
         </div>
 
         <div class="text-center w-56">
-            <img class="mx-auto my-4" src="./img/chatluong.jpg" alt="" class="">
+            <img class="mx-auto my-4" src="${Image.cl}" alt="" class="">
             <h4 class="font-semibold text-xl">Chất lượng</h4>
             <p class="mt-1 font-light text-sm">Nguyên liệu đảm bảo vệ sinh an toàn vệ sinh thực
                 phẩm</p>
         </div>
 
         <div class="text-center w-56">
-            <img class="mx-auto my-4" src="./img/thanhtoan.jpg" alt="" class="">
+            <img class="mx-auto my-4" src="${Image.tt}" alt="" class="">
             <h4 class="font-semibold text-xl">Thanh toán dễ
                 dàng</h4>
             <p class="mt-1 font-light text-sm">Trả tiền khi nhận hàng <br><span>(COD)</span>
@@ -69,12 +69,7 @@ const HomePage = () => {
 
     <!-- products -->
     <!-- new -->
-    <div class="px-10 my-20">
-                <h1 class="text-3xl my-10 font-bold">Sản phẩm mới nhất</h1>
-                <div class="grid grid-cols-4 gap-5 text-center">
-                    ${products.map((item) => ItemProduct(item)).join("")}
-                </div>
-            </div>
+    ${ListProNew(products)}
 </div>
     `
 

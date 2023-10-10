@@ -1,0 +1,15 @@
+:root {
+    --main-color: #b91c1c;
+}
+
+.item__detail {
+    display: grid;
+    grid-template-columns: 57% 40%;
+
+}
+
+.admin {
+    display: grid;
+    grid-template-columns: 300px calc(100% - 400px);
+
+}

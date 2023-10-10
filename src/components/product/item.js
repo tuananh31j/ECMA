@@ -1,5 +1,7 @@
 const ItemProduct = (data) => {
-    return `
+
+    if (typeof data == "object") {
+        return `
         <div
             class="hover:border-1 relative transition-all ease-in-out hover:border-gray-300 hover:rounded-md hover:scale-95 hover:shadow-md hover:shadow-slate-500 p-3">
             <a href="/product/${data.id}"><img class="w-full object-cover" src="https://picsum.photos/200/250" alt=""></a>
@@ -18,6 +20,7 @@ const ItemProduct = (data) => {
             </button>
         </div>
     `
+    }
 }
 
 export default ItemProduct;

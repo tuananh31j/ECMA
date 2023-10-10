@@ -1,7 +1,7 @@
 const AboutPage = () => {
     return `
     <div class="main-content container my-5">
-    <main>
+    <main class="px-5 my-5">
         <div class="aboutUs-title">
             <h3 class="mb-5 tw-text-xl tw-font-semibold">Giới thiệu</h3>
             <p>Highlands Coffee CPG thuộc Công ty TNHH MTV Thái Kiên tự hào là đơn vị phân phối hợp lệ và độc

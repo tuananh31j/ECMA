@@ -1,3 +1,4 @@
+import Image from "../../asset";
 const Footer = () => {
     return `
         <footer class="my-11 px-10">
@@ -7,7 +8,7 @@ const Footer = () => {
                 <h2 class="font-semibold mb-3">HAI LẦN COFFEE CPG</h2>
                 <p class="">Hai Lần coffee là dự án của sinh viên trường cao đẳng thực hành FPT
                     polytechnic</p>
-                <img class="mt-3" src="./img/logo.png" alt="">
+                <img class="mt-3" src="${Image.logo}" alt="">
             </div>
 
             <div class="w-60 leading-7">

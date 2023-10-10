@@ -1,7 +1,7 @@
 const ContactPage = () => {
     return `
     <div class="main-content container my-5">
-    <main>
+    <main class="px-5 my-5">
 
         <div class="row gap-3">
             <div class="col tw-leading-7">

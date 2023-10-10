@@ -2,28 +2,16 @@ import { useEffect, useState } from "../../utilities";
 import { $ } from "../../utilities";
 
 const Dashboard = () => {
-    useEffect(() => {
-        const menuButton = $("#menuButton");
-        const menuElement = $("#menuElement");
-        const contentElement = $("#content");
 
-        menuButton.addEventListener("click", () => {
-            menuElement.classList.toggle("-translate-x-full");
-            menuButton.classList.toggle("-translate-x-[310px]");
-            menuButton.classList.toggle("rotate-180");
-            contentElement.classList.toggle("ms-3");
-
-
-        })
-
-    }, [])
 
     return `
     <div id='menuButton'
-    class="transition-all  duration-300 fixed left-[294px] me-4  top-[20px] rounded-md bg-red-800 z-50 p-4">
+    class="transition-all  duration-700 fixed left-[294px] me-4  top-[20px] rounded-md bg-red-800 z-50 p-4">
     <i class="fa-solid fa-angles-left text-white"></i>
 </div>
-            <div id="menuElement" class="   overflow-y-scroll overflow-x-visible transition-all ease-in-out bg-red-700 fixed  h-full">
+    
+   
+            <div id="menuElement" class="   overflow-y-scroll overflow-x-visible duration-700 transition-all ease-in-out bg-red-700 fixed  h-full">
             
             <h2 class="text-center pe-3 mx-auto mb-4 font-semibold text-4xl">Hignland
                 coffee</h2>

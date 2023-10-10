@@ -1,13 +1,14 @@
 import { getAll } from "@/api";
 import Banner from '@/components/banner';
 import { useState, useEffect } from "@/utilities";
+import Image from "@/asset";
 let user = localStorage.getItem("user") ?? null
 const Header = () => {
 
     return `
             <header>
             <div class="bg-red-700 flex justify-between p-4 px-10 items-center">
-                <div class="w-[248px] "><div class="w-20"><img src="./img/logo.png" alt=""></div></div>
+                <div class="w-[248px] "><div class="w-20"><img src="${Image.logo}" alt=""></div></div>
 
                 <div>
                     <form action="" method="post">

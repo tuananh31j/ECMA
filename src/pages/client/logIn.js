@@ -14,7 +14,6 @@ const Login = () => {
         formLogin.addEventListener("submit", (e) => {
             e.preventDefault();
             const vali = inputAll.find(item => item.value == "");
-            let flag = false;
             if (vali) {
                 errMessage.email = isValidate(emailInput, "Chưa nhập địa chỉ email!");
                 errMessage.pass = isValidate(passInput, "Chưa nhập mật khẩu!");
@@ -22,13 +21,9 @@ const Login = () => {
             } else if (!vali) {
                 getAll("customers")
                     .then((res) => res.data)
-                    .then(data => data.find(user => user.email == emailInput.value || user.pass == passInput.value))
+                    .then(data => data.find(user => user.email == emailInput.value && user.pass == passInput.value))
                     .then(user => {
                         if (user) {
-                            flag = user.email == emailInput.value && user.pass == passInput.value
-                        }
-                        console.log(user);
-                        if (flag) {
                             dataForm = JSON.stringify(user);
                             localStorage.setItem("user", dataForm);
                             setErr({})

@@ -265,22 +265,6 @@
       "id": 17
     },
     {
-      "{\"name\":\"dfdcd\",\"email\":\"tunanhk@gmail.com\",\"pass\":\"dcdc\",\"role\":0,\"createAt\":\"2023-10-08T07:57:12.960Z\",\"updateAt\":null}": "",
-      "id": 18
-    },
-    {
-      "{\"name\":\"dfdcd\",\"email\":\"tunanhk@gmail.com\",\"pass\":\"dcdc\",\"role\":0,\"createAt\":\"2023-10-08T07:57:12.963Z\",\"updateAt\":null}": "",
-      "id": 19
-    },
-    {
-      "{\"name\":\"Namtttt\",\"email\":\"tuananhcbqqo@gmail.com\",\"pass\":\"dfdf\",\"role\":0,\"createAt\":\"2023-10-08T07:58:08.735Z\",\"updateAt\":null}": "",
-      "id": 20
-    },
-    {
-      "{\"name\":\"Namtttt\",\"email\":\"tuananhcbqqo@gmail.com\",\"pass\":\"dfdf\",\"role\":0,\"createAt\":\"2023-10-08T07:58:08.738Z\",\"updateAt\":null}": "",
-      "id": 21
-    },
-    {
       "name": "ccc",
       "email": "tuananhcbqqo@gmail.com",
       "pass": "cs",
@@ -425,7 +409,71 @@
   "categorys": [
     {
       "id": 1,
-      "name": "Trà sữa"
+      "name": "Trà sữa nè"
+    },
+    {
+      "id": 3,
+      "name": " sữa"
+    },
+    {
+      "id": 4,
+      "name": "Trà "
+    },
+    {
+      "id": 5,
+      "name": " sữa"
+    },
+    {
+      "name": "coffe",
+      "id": 7
+    },
+    {
+      "name": "coffe",
+      "id": 8
+    },
+    {
+      "name": "đen đá",
+      "id": 9
+    },
+    {
+      "name": "đen đá",
+      "id": 10
+    },
+    {
+      "name": "Nam",
+      "id": 11
+    },
+    {
+      "name": "gg",
+      "id": 12
+    },
+    {
+      "name": "dfgsdf",
+      "id": 13
+    },
+    {
+      "name": "dfgsdf",
+      "id": 14
+    },
+    {
+      "name": "ds",
+      "id": 15
+    },
+    {
+      "name": "ds",
+      "id": 16
+    },
+    {
+      "name": "t",
+      "id": 17
+    },
+    {
+      "name": "t",
+      "id": 18
+    },
+    {
+      "name": "t",
+      "id": 19
     }
   ]
 }

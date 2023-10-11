@@ -2,7 +2,6 @@ import axios from "axios";
 import { add, getAll } from "../../../api";
 import { isValidate, useEffect, useState } from "../../../utilities";
 import { $, $$ } from "@/utilities"
-import { data } from "autoprefixer";
 
 const AddProduct = () => {
     const [err, setErr] = useState({})
@@ -87,6 +86,7 @@ const AddProduct = () => {
                         errElement.map(item => item.innerText = "")
                         inputAll.map(item => item.value = "")
                         btn.classList.remove("rotate-[1000deg]")
+                        console.log("done");
 
                     })
             }

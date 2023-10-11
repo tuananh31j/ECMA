@@ -14,8 +14,8 @@ const ListProduct = () => {
         const desMoreElement = Array.from($$(".desMore"));
         const desElement = Array.from($$(".desElement"));
 
-        desElement.map((item, i) => item.addEventListener("mouseenter", () => {
-            item.nextElementSibling.classList.toggle("hidden");
+        desElement.map((item, i) => item.addEventListener("click", (e) => {
+            e.target.nextElementSibling.classList.toggle("hidden");
             console.log("đ");
         }))
         btnDeleteElement.map(btn => {
@@ -65,7 +65,7 @@ const ListProduct = () => {
                                 <td class="border-2">${i + 1}</td>
                                 <td class="border-2"><img src="${item.img}" class="w-10 h-10 object-cover" /></td>
                                 <td class="border-2">${item.name}</td>
-                                <td class="border-2" >${item.des.slice(0, 10)} ${item.des.length == 10 ? "" : "<span class='desElement '>...</span>"}<span class='desMore hidden relative'>${item.des}</span></td>
+                                <td class="border-2" >${item.des}</span></td>
                                 <td class="border-2">${item.sale}</td>
                                 <td class="border-2">${item.price}</td>
                                 <td class="border-2">${item.category_id}</td>

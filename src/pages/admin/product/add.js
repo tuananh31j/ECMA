@@ -69,7 +69,7 @@ const AddProduct = () => {
                     .then((data) => data.url)
                     .then((url) => {
                         console.log(url);
-                        data = {
+                        return data = {
                             name: inputName.value,
                             des: inputDes.value,
                             category_id: inputCate.value,
@@ -79,8 +79,8 @@ const AddProduct = () => {
                             img: url,
                             createAt: new Date()
                         }
-                        return add("products", data)
                     })
+                    .then((data) => add("products", data))
                     .then(() => swal("Thêm thành công!", "", "success"))
                     .then(() => {
                         errElement.map(item => item.innerText = "")

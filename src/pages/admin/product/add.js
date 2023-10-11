@@ -5,12 +5,15 @@ import { $, $$ } from "@/utilities"
 import { data } from "autoprefixer";
 
 const AddProduct = () => {
+    const [err, setErr] = useState({})
     const [cates, setCategorys] = useState([]);
     let a = 1;
     useEffect(() => {
+        // getAll("categorys")
+        //     .then((res) => res.data)
+        //     .then((data) => setCategorys(data))
         getAll("categorys")
-            .then((res) => res.data)
-            .then((data) => setCategorys(data))
+            .then(({ data }) => setCategorys(data))
     }, [])
     useEffect(() => {
         const formElement = $("#formAddProduct");
@@ -33,7 +36,6 @@ const AddProduct = () => {
 
             let errMessage = {};
             let data = {};
-
             let flag = inputAll.find(item => item.value == '');
 
             if (flag) {
@@ -43,18 +45,21 @@ const AddProduct = () => {
                 errMessage.img = inputImage.files[0] ? '' : 'Chưa gửi ảnh!';
                 errMessage.cate = isValidate(inputCate, "Chưa chọn danh mục sản phẩm!");
                 errMessage.des = isValidate(inputDes, "Chưa nhập mô tả sản phẩm!");
-                console.log(inputImage.files[0]);
-                console.log(a++);
-                console.log(flag);
+                // console.log(inputImage.files[0]);
+                // console.log(a++);
+                // console.log(flag);
                 setErr(errMessage);
 
             } else {
-                console.log(flag);
-                console.log("fet");
+                console.log(1);
+                // console.log(flag);
+                // console.log("fet");
                 const formData = new FormData;
                 let sale = inputSale.inputSale == "" ? 0 : inputSale.value
                 formData.append("file", inputImage.files[0]);
                 formData.append("upload_preset", "n6ogapv9");
+
+                // console.log(formData);
 
                 axios.post("https://api.cloudinary.com/v1_1/djcimgjcc/image/upload", formData, {
                     headers: {
@@ -64,6 +69,7 @@ const AddProduct = () => {
                     .then((res) => res.data)
                     .then((data) => data.url)
                     .then((url) => {
+                        console.log(url);
                         data = {
                             name: inputName.value,
                             des: inputDes.value,

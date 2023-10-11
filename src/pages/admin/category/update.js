@@ -3,7 +3,6 @@ import { useEffect, useState } from "../../../utilities";
 import { $, $$ } from "@/utilities"
 
 const UpdateCategory = (id) => {
-    const [err, setErr] = useState('');
     const [category, setCategory] = useState({});
 
 
@@ -16,14 +15,14 @@ const UpdateCategory = (id) => {
     useEffect(() => {
         const formElement = $("#formUpdateCategory");
         const inputName = $("#name");
-        const noti = $(".noti");
+        const err = $(".errElement");
 
         formElement.addEventListener("submit", (e) => {
 
             e.preventDefault();
             let data = {};
             if (inputName.value == '') {
-                setErr("Chưa nhập tên danh mục!");
+                err.innerText = "Chưa nhập tên danh mục!";
             } else {
                 data = {
                     id: id,
@@ -34,6 +33,7 @@ const UpdateCategory = (id) => {
                     .then(() => {
                         swal("Cập nhật thành công!", "", "success");
                     })
+                    .then(() => err.innerText = "")
             }
         })
     })
@@ -46,9 +46,9 @@ const UpdateCategory = (id) => {
                         <div>
                             <label for="name" class="text-xl font-semibold mb-2">Tên danh mục:</label></br>
                             <input placeholder="Nhập tên dnah mục" value="${category.name}" class="border-2 p-3  border-black rounded-md focus:border-4 focus:border-gray-700" type="text" name="name" id="name">
-                            <p class="text-red-700">${err}</p>
+                            <p class="text-red-700 errElement"></p>
                         </div>
-                        <button class="bg-green-900 my-4 rounded-md p-2 text-white">Thêm</button>
+                        <button class="bg-green-900 my-4 rounded-md p-2 text-white">Cập nhật</button>
                     </form>
                 </div>
                 </div>

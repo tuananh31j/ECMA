@@ -3,26 +3,20 @@ import { useState, useEffect, router } from "../../../utilities";
 import { $$ } from "../../../utilities";
 import swal from "sweetalert";
 const ListCategory = () => {
-    const [category, setCategory] = useState([]);
+    const [categorys, setCategorys] = useState([]);
     useEffect(() => {
         getAll("categorys")
             .then((res) => res.data)
-            .then((data) => setCategory(data))
+            .then((data) => setCategorys(data))
     }, [])
-
-
-
 
     useEffect(() => {
         const btnDeleteElement = Array.from($$(".btn-delete"));
         btnDeleteElement.map(btn => {
             btn.addEventListener("click", (e) => {
                 let id = e.target.dataset.id;
-
-
                 swal({
-                    title: "Are you sure?",
-                    text: "Once deleted, you will not be able to recover this imaginary file!",
+                    title: "Bạn có chắc là muốn xóa không??",
                     icon: "warning",
                     buttons: true,
                     dangerMode: true,
@@ -30,7 +24,7 @@ const ListCategory = () => {
                     .then((willDelete) => {
                         if (willDelete) {
                             remove("categorys", id)
-                            router.navigate("/admin/category")
+                                .then(() => router.navigate("/admin/category"))
 
                         }
                     })
@@ -52,8 +46,8 @@ const ListCategory = () => {
                             <th class="border-2 border-black">Chức năng</th>
                         </thead>
                         <tbody class='w-full'>
-                            ${category.map((item, i) => `
-                                <tr class="border-2 hover:bg-slate-500">
+                            ${categorys.map((item, i) => `
+                                <tr class="border-2 hover:bg-slate-500 hover:text-white">
                                 <td class="border-2">${i + 1}</td>
                                 <td class="border-2">${item.name}</td>
                                 <td class="border-2"><button class="btn-delete rounded-md bg-red-700 p-2 text-base text-white" data-id="${item.id}">Xóa</button> <a href="/admin/category/update/${item.id}"><button class="rounded-md bg-gray-700 p-2 text-base text-white" data-id="${item.id}">Sửa</button></a></td>

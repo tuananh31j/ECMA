@@ -14,6 +14,8 @@ import ListSize from "./pages/admin/size";
 import UpdateCategory from "./pages/admin/category/update";
 import AddCategory from "./pages/admin/category/add";
 
+import AddProduct from "./pages/admin/product/add";
+
 
 const app = $('#app');
 const root = $('#root');
@@ -35,10 +37,10 @@ router.on("/admin/dashboard", () => LayoutAdmin(() => render(ChartPage, app)));
 //product
 router.on("/admin/product", () => LayoutAdmin(() => render(ListProduct, app)));
 router.on("/admin/product/update", () => LayoutAdmin(() => render(HomePage, app)));
-router.on("/admin/product/add", () => LayoutAdmin(() => render(HomePage, app)));
+router.on("/admin/product/add", () => LayoutAdmin(() => render(AddProduct, app)));
 //category
 router.on("/admin/category", () => LayoutAdmin(() => render(ListCategory, app)));
-router.on("/admin/category/update/:id", ({data}) => LayoutAdmin(() => render(UpdateCategory, app, data.id)));
+router.on("/admin/category/update/:id", ({ data }) => LayoutAdmin(() => render(UpdateCategory, app, data.id)));
 router.on("/admin/category/add", () => LayoutAdmin(() => render(AddCategory, app)));
 //customer
 router.on("/admin/customer", () => LayoutAdmin(() => render(ListCustomer, app)));
@@ -47,6 +49,6 @@ router.on("/admin/customer/add", () => LayoutAdmin(() => render(HomePage, app)))
 
 
 
-router.notFound(() => render(Notfound, app));
+router.notFound(() => render(Notfound, root));
 router.resolve();
 

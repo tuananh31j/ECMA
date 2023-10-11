@@ -3,18 +3,17 @@ import { useEffect, useState } from "../../../utilities";
 import { $, $$ } from "@/utilities"
 
 const AddCategory = () => {
-    const [err, setErr] = useState('');
     useEffect(() => {
         const formElement = $("#formAddCategory");
         const inputName = $("#name");
-        const noti = $(".noti");
+        const err = $(".errElement");
 
         formElement.addEventListener("submit", (e) => {
 
             e.preventDefault();
             let data = {};
             if (inputName.value == '') {
-                setErr("Chưa nhập tên danh mục!");
+                err.innerText = "Chưa nhập tên danh mục!";
             } else {
                 data = {
                     name: inputName.value
@@ -24,6 +23,7 @@ const AddCategory = () => {
                     .then(() => {
                         swal("Thêm thành công!", "", "success");
                     })
+                    .then(() => err.innerText = "")
             }
         })
     })
@@ -36,7 +36,7 @@ const AddCategory = () => {
                         <div>
                             <label for="name" class="text-xl font-semibold mb-2">Tên danh mục:</label></br>
                             <input placeholder="Nhập tên dnah mục" class="border-2 p-3  border-black rounded-md focus:border-4 focus:border-gray-700" type="text" name="name" id="name">
-                            <p class="text-red-700">${err}</p>
+                            <p class="text-red-700 errElement"></p>
                         </div>
                         <button class="bg-green-900 my-4 rounded-md p-2 text-white">Thêm</button>
                     </form>

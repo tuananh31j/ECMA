@@ -25,88 +25,541 @@
       "updateAt": null
     },
     {
-      "id": 3,
-      "name": "Trà sữa socola",
-      "des": "trà sữa được làm từ sữa",
-      "category_id": 1,
-      "sale": 20,
-      "view": 3,
-      "price": "300000",
-      "img": "https://picsum.photos/200/250",
-      "createAt": "2023-01-02",
-      "updateAt": null
+      "name": "Nam",
+      "des": "dff",
+      "category_id": "5",
+      "sale": "5",
+      "view": 0,
+      "price": "dfsd",
+      "img": null,
+      "id": 3
     },
     {
-      "id": 4,
-      "name": "Trà sữa socola",
-      "des": "trà sữa được làm từ sữa",
-      "category_id": 1,
-      "sale": 20,
-      "view": 3,
-      "price": "300000",
-      "img": "https://picsum.photos/200/250",
-      "createAt": "2023-01-02",
-      "updateAt": null
+      "name": "Nam",
+      "des": "dff",
+      "category_id": "5",
+      "sale": "5",
+      "view": 0,
+      "price": "dfsd",
+      "img": null,
+      "id": 4
     },
     {
-      "id": 5,
-      "name": "Trà sữa socola",
-      "des": "trà sữa được làm từ sữa",
-      "category_id": 1,
-      "sale": 20,
-      "view": 3,
-      "price": "300000",
-      "img": "https://picsum.photos/200/250",
-      "createAt": "2023-01-02",
-      "updateAt": null
+      "name": "g",
+      "des": "dff",
+      "category_id": "4",
+      "sale": "5",
+      "view": 0,
+      "price": "5434",
+      "img": null,
+      "createAt": "2023-10-10T18:52:12.929Z",
+      "id": 5
     },
     {
-      "id": 6,
-      "name": "Trà sữa socola",
-      "des": "trà sữa được làm từ sữa",
-      "category_id": 1,
-      "sale": 20,
-      "view": 3,
-      "price": "300000",
-      "img": "https://picsum.photos/200/250",
-      "createAt": "2023-01-02",
-      "updateAt": null
+      "name": "g",
+      "des": "dff",
+      "category_id": "4",
+      "sale": "5",
+      "view": 0,
+      "price": "5434",
+      "img": null,
+      "createAt": "2023-10-10T18:52:13.012Z",
+      "id": 6
     },
     {
-      "id": 7,
-      "name": "Trà sữa socola",
-      "des": "trà sữa được làm từ sữa",
-      "category_id": 1,
-      "sale": 20,
-      "view": 3,
-      "price": "300000",
-      "img": "https://picsum.photos/200/250",
-      "createAt": "2023-01-02",
-      "updateAt": null
+      "name": "Nam",
+      "des": "dff",
+      "category_id": "5",
+      "sale": "5",
+      "view": 0,
+      "price": "6",
+      "img": "",
+      "createAt": "2023-10-10T19:08:32.576Z",
+      "id": 7
     },
     {
-      "id": 8,
-      "name": "Trà sữa socola",
-      "des": "trà sữa được làm từ sữa",
-      "category_id": 1,
-      "sale": 20,
-      "view": 3,
-      "price": "300000",
-      "img": "https://picsum.photos/200/250",
-      "createAt": "2023-01-02",
-      "updateAt": null
+      "name": "Nam",
+      "des": "dff",
+      "category_id": "5",
+      "sale": "5",
+      "view": 0,
+      "price": "6",
+      "img": "",
+      "createAt": "2023-10-10T19:08:32.578Z",
+      "id": 8
     },
     {
-      "id": 9,
-      "name": "Trà sữa socolaaaa",
-      "des": "trà sữa được làm từ sữa",
-      "category_id": 1,
-      "sale": 20,
-      "view": 3,
-      "price": "300000",
-      "img": "https://picsum.photos/200/250",
-      "createAt": "2023-01-02",
-      "updateAt": null
+      "name": "Nam",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "dfsd",
+      "img": "",
+      "createAt": "2023-10-11T02:54:10.272Z",
+      "id": 9
+    },
+    {
+      "name": "Nam",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "dfsd",
+      "img": "",
+      "createAt": "2023-10-11T02:54:10.275Z",
+      "id": 10
+    },
+    {
+      "name": "dcdc",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "5434",
+      "img": "",
+      "createAt": "2023-10-11T03:19:29.206Z",
+      "id": 11
+    },
+    {
+      "name": "dcdc",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "5434",
+      "img": "",
+      "createAt": "2023-10-11T03:19:29.209Z",
+      "id": 12
+    },
+    {
+      "name": "dfeg",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "dfsd",
+      "img": "",
+      "createAt": "2023-10-11T03:20:35.719Z",
+      "id": 13
+    },
+    {
+      "name": "dfeg",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "dfsd",
+      "img": "",
+      "createAt": "2023-10-11T03:20:35.722Z",
+      "id": 14
+    },
+    {
+      "name": "Nam",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "6",
+      "img": "",
+      "createAt": "2023-10-11T03:23:20.706Z",
+      "id": 15
+    },
+    {
+      "name": "Nam",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "6",
+      "img": "",
+      "createAt": "2023-10-11T03:23:20.708Z",
+      "id": 16
+    },
+    {
+      "name": "dfeg",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "6",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696995023/cphoq66ymzgdmzp8w5jg.png",
+      "createAt": "2023-10-11T03:30:23.859Z",
+      "id": 19
+    },
+    {
+      "name": "dfeg",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "6",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696995023/rccanjasjwx0olnwmljw.png",
+      "createAt": "2023-10-11T03:30:23.876Z",
+      "id": 20
+    },
+    {
+      "name": "dfeg",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "6",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696995024/d7p7i8lpiloqcrztrcp7.png",
+      "createAt": "2023-10-11T03:30:25.210Z",
+      "id": 21
+    },
+    {
+      "name": "dfeg",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "6",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696995025/hrpxdvktw37lwnypv7zx.png",
+      "createAt": "2023-10-11T03:30:25.349Z",
+      "id": 22
+    },
+    {
+      "name": "dfeg",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "6",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696995025/ibcooa5odas1wtye800j.png",
+      "createAt": "2023-10-11T03:30:25.409Z",
+      "id": 23
+    },
+    {
+      "name": "dfeg",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "6",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696995025/tipl8fuvgslbsaren5ac.png",
+      "createAt": "2023-10-11T03:30:25.997Z",
+      "id": 24
+    },
+    {
+      "name": "Nam",
+      "des": "dff",
+      "category_id": "1",
+      "sale": "5",
+      "view": 0,
+      "price": "6",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696995110/xsgxbo1vthedptj8tycd.png",
+      "createAt": "2023-10-11T03:31:50.278Z",
+      "id": 25
+    },
+    {
+      "name": "Nam",
+      "des": "dff",
+      "category_id": "1",
+      "sale": "5",
+      "view": 0,
+      "price": "6",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696995110/nvdid20i7qf7avstwmg0.png",
+      "createAt": "2023-10-11T03:31:50.353Z",
+      "id": 26
+    },
+    {
+      "name": "dfeg",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "6",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696995401/iunx4vpgc2l3inliok5y.png",
+      "createAt": "2023-10-11T03:36:41.242Z",
+      "id": 27
+    },
+    {
+      "name": "dfeg",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "6",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696995401/m0rq2oqni1rhfdxjkjfh.png",
+      "createAt": "2023-10-11T03:36:41.528Z",
+      "id": 28
+    },
+    {
+      "name": "g",
+      "des": "dff",
+      "category_id": "5",
+      "sale": "5",
+      "view": 0,
+      "price": "5434",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696996631/qdksbpfmyyubxksxzrt5.png",
+      "createAt": "2023-10-11T03:57:11.454Z",
+      "id": 29
+    },
+    {
+      "name": "g",
+      "des": "dff",
+      "category_id": "5",
+      "sale": "5",
+      "view": 0,
+      "price": "5434",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696996631/mqzdezqcperyc13jdpnf.png",
+      "createAt": "2023-10-11T03:57:11.697Z",
+      "id": 30
+    },
+    {
+      "name": "dfeg",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "4",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696997953/fozsc9yhycp1yws1g6yv.png",
+      "createAt": "2023-10-11T04:19:13.428Z",
+      "id": 31
+    },
+    {
+      "name": "dfeg",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "4",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696997953/k3achmpelrskdghuelbg.png",
+      "createAt": "2023-10-11T04:19:13.644Z",
+      "id": 32
+    },
+    {
+      "name": "g",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "6",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696998079/y8bicqhotgfumz1bpzb4.png",
+      "createAt": "2023-10-11T04:21:20.090Z",
+      "id": 33
+    },
+    {
+      "name": "g",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "6",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696998079/k4cygc4gqx9piagxun3c.png",
+      "createAt": "2023-10-11T04:21:20.196Z",
+      "id": 34
+    },
+    {
+      "name": "Nam",
+      "des": "dff",
+      "category_id": "1",
+      "sale": "5",
+      "view": 0,
+      "price": "5434",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696998129/qox9lmwjfce6iura7ynm.png",
+      "createAt": "2023-10-11T04:22:09.644Z",
+      "id": 35
+    },
+    {
+      "name": "Nam",
+      "des": "dff",
+      "category_id": "1",
+      "sale": "5",
+      "view": 0,
+      "price": "5434",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696998129/q8t78kq3phqtz6f7emzp.png",
+      "createAt": "2023-10-11T04:22:09.943Z",
+      "id": 36
+    },
+    {
+      "name": "dfeg",
+      "des": "dff",
+      "category_id": "4",
+      "sale": "33",
+      "view": 0,
+      "price": "6",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696998215/ikq5g0doouhv7aumbp7e.png",
+      "createAt": "2023-10-11T04:23:35.541Z",
+      "id": 37
+    },
+    {
+      "name": "dfeg",
+      "des": "dff",
+      "category_id": "4",
+      "sale": "33",
+      "view": 0,
+      "price": "6",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696998215/gxk8s5nmjpadrnklmgnz.png",
+      "createAt": "2023-10-11T04:23:35.564Z",
+      "id": 38
+    },
+    {
+      "name": "g",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "33",
+      "view": 0,
+      "price": "5434",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696998544/p13m9x4tzqmzcyz1qkjt.png",
+      "createAt": "2023-10-11T04:29:04.864Z",
+      "id": 39
+    },
+    {
+      "name": "g",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "33",
+      "view": 0,
+      "price": "5434",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696998544/ontwf12w1azamrozdsf6.png",
+      "createAt": "2023-10-11T04:29:05.029Z",
+      "id": 40
+    },
+    {
+      "name": "Nam",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "dfsd",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696998640/veice5txndpu35cjscdm.png",
+      "createAt": "2023-10-11T04:30:40.327Z",
+      "id": 41
+    },
+    {
+      "name": "Nam",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "dfsd",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696998640/cv7gkvl33l3wujd5bfbj.png",
+      "createAt": "2023-10-11T04:30:40.581Z",
+      "id": 42
+    },
+    {
+      "name": "dfeg",
+      "des": "dff",
+      "category_id": "4",
+      "sale": "5",
+      "view": 0,
+      "price": "4",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696998912/ifqxr5kyiyjtu6kiszol.png",
+      "createAt": "2023-10-11T04:35:12.654Z",
+      "id": 43
+    },
+    {
+      "name": "Nam",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "4",
+      "view": 0,
+      "price": "6",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696998975/vnanfypicifelru8bfey.png",
+      "createAt": "2023-10-11T04:36:15.764Z",
+      "id": 44
+    },
+    {
+      "name": "Nam",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "4",
+      "view": 0,
+      "price": "6",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696998975/wwwf9c1dzapffiqimtos.png",
+      "createAt": "2023-10-11T04:36:16.022Z",
+      "id": 45
+    },
+    {
+      "name": "g",
+      "des": "dff",
+      "category_id": "1",
+      "sale": "33",
+      "view": 0,
+      "price": "5434",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696999079/adjnxogrtbgctrfwgfpb.png",
+      "createAt": "2023-10-11T04:37:59.727Z",
+      "id": 46
+    },
+    {
+      "name": "g",
+      "des": "dff",
+      "category_id": "1",
+      "sale": "33",
+      "view": 0,
+      "price": "5434",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696999079/ts57nxsumadpmpshmuem.png",
+      "createAt": "2023-10-11T04:37:59.810Z",
+      "id": 47
+    },
+    {
+      "name": "Nam",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "6",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696999170/xoywvvakj7jd1vgnlcyr.png",
+      "createAt": "2023-10-11T04:39:31.012Z",
+      "id": 48
+    },
+    {
+      "name": "Nam",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "6",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1696999170/x3psund2wa4vcvccwiqm.png",
+      "createAt": "2023-10-11T04:39:31.083Z",
+      "id": 49
+    },
+    {
+      "name": "Nam",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "6",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697001340/peqqkyoxwbn3rkbycpf9.png",
+      "createAt": "2023-10-11T05:15:40.896Z",
+      "id": 50
+    },
+    {
+      "name": "Nam",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "6",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697001340/i6vgkyjkrlvhynp53wri.png",
+      "createAt": "2023-10-11T05:15:41.158Z",
+      "id": 51
+    },
+    {
+      "name": "g",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "4",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697001420/rkaqr11gsnxylzgrhdya.png",
+      "createAt": "2023-10-11T05:17:01.039Z",
+      "id": 52
+    },
+    {
+      "name": "g",
+      "des": "dff",
+      "category_id": "3",
+      "sale": "5",
+      "view": 0,
+      "price": "4",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697001420/jfhcgo8fgjmz5rivdxbg.png",
+      "createAt": "2023-10-11T05:17:01.139Z",
+      "id": 53
     }
   ],
   "customers": [
@@ -409,7 +862,7 @@
   "categorys": [
     {
       "id": 1,
-      "name": "Trà sữa nè"
+      "name": "Nam"
     },
     {
       "id": 3,
@@ -444,16 +897,12 @@
       "id": 11
     },
     {
-      "name": "gg",
-      "id": 12
-    },
-    {
       "name": "dfgsdf",
       "id": 13
     },
     {
-      "name": "dfgsdf",
-      "id": 14
+      "id": 14,
+      "name": "gggg"
     },
     {
       "name": "ds",
@@ -472,8 +921,36 @@
       "id": 18
     },
     {
-      "name": "t",
+      "name": "Nam",
       "id": 19
+    },
+    {
+      "name": "Nam",
+      "id": 20
+    },
+    {
+      "name": "cxcx",
+      "id": 21
+    },
+    {
+      "name": "cxcx",
+      "id": 22
+    },
+    {
+      "name": "dfsdccxxxx",
+      "id": 23
+    },
+    {
+      "name": "dfsdccxxxx",
+      "id": 24
+    },
+    {
+      "name": "Nam",
+      "id": 25
+    },
+    {
+      "name": "dsf",
+      "id": 26
     }
   ]
 }

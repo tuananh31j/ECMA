@@ -17,14 +17,19 @@ const ProDetailPage = (id) => {
             <div class="px-5 my-5  " >
                 <div class="${Classes.item__detail} justify-evenly items-center">
                     <div class="w-full">
-                        <img class="w-full h-full object-cover" src="${Image.test}" alt="">
+                        <img class="w-full h-full object-cover" src="${pro.img}" alt="">
                     </div>
                     <div class="">
-                        <h2 class="font-semibold text-3xl">${pro.name}</h2>
+                        <h2 class="font-semibold uppercase text-3xl">${pro.name}</h2>
                         <div class="flex justify-between my-3 font-light">
                         <p>Lượt xem: ${pro.view}</p>
                             <p>Mã sản phẩm: ${pro.id}</p>
                         </div>
+                        <p class="text-red-700 text-xl mt-auto flex-shrink-0"><span class="text-lg">${Math.round(pro.price - (pro.price * pro.sale / 100))}</span>
+                        <span class="underline">đ</span>
+                        <sub class="line-through font-light text-gray-600 text-sm "> ${pro.price}đ</sub>
+                </p>
+<p class="my-4">Mô tả: ${pro.des}</p>
                     </div>
                 </div>
             </div>

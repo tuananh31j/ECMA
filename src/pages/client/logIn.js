@@ -1,5 +1,6 @@
 import { render, useState, useEffect, router, $, $$, isValidate } from "@/utilities";
-import { getAll } from "../../api";
+import { getAll } from "@/api";
+import Image from "@/asset";
 const Login = () => {
     const [err, setErr] = useState([]);
     useEffect(() => {
@@ -39,7 +40,7 @@ const Login = () => {
     }, [err])
     return `
             <div
-            class="bg-[url('../../public/img/backgroundHignland.jpg')] relative min-h-screen w-full bg-no-repeat bg-cover">
+            class="bg-[url('http://res.cloudinary.com/djcimgjcc/image/upload/v1697165893/h0kbzymvapcqrmcvpmo8.jpg')] relative min-h-screen w-full bg-no-repeat bg-cover">
             <div class="backdrop-blur-[4px] absolute inset-0 "></div>
             <div class="relative h-screen ">
                 <div
@@ -66,7 +67,6 @@ const Login = () => {
                             <button 
                                 class="bg-red-700 border-2 mb-3 border-red-700 rounded-md p-4 text-white font-semibold hover:opacity-80 active:translate-y-[2px] transition-all ease-in-out">Đăng
                                 nhập</button>
-                            <a href="" class="text-center text-red-700 hover:underline">Đăng ký</a>
                             <a href="" class="text-center text-red-700 hover:underline">Quên mật
                                 khẩu?</a>
                         </div>

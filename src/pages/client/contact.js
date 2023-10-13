@@ -1,4 +1,5 @@
 const ContactPage = () => {
+    console.log(window.location.pathname);
     return `
     <div class="main-content container my-5">
     <main class="px-5 my-5">
@@ -16,47 +17,7 @@ const ContactPage = () => {
                     <p>Email: <span>Hailen@gmail.com</span></p>
                 </div>
             </div>
-            <div class="col">
-                <div>
-                    <form action="index.php?url=contact" method="post">
-                        <div class="row mb-3">
-                            <!-- họ tên -->
-                            <div class="col-6">
-                                <label for="name">Họ tên<span class="text-danger">*</span></label><br>
-                                <input name="name" class="w-100 rounded-2 p-2 border" type="text" placeholder="Mời nhập họ tên">
-                                <p class="text-danger"><?= isset($err['name']) ? $err['name'] : '' ?></p>
-                            </div>
-                            <div class="col-6">
-                                <!-- email -->
-                                <label for="email">Email<span class="text-danger">*</span></label><br>
-                                <input name="email" class="w-100 rounded-2 p-2 border" type="text" placeholder="Nhập địa chỉ email">
-                                <p class="text-red-700"></p>
-                            </div>
-                        </div>
-                        <!-- điện thoại -->
-                        <div class="row my-3">
-                            <div class="col">
-                                <label for="phone">Điện thoại<span class="text-danger">*</span></label><br>
-                                <input name="phone" class="w-100 rounded-2 p-2 border" type="text" placeholder="Nhập số điện thoại">
-                                <p class="text-danger"><?= isset($err['phone']) ? $err['phone'] : '' ?></p>
-                            </div>
-
-                        </div>
-                        <!-- nội dung -->
-                        <div class="row my-3">
-                            <div class="col">
-                                <label for="phone">Nội dung<span class="text-danger">*</span></label><br>
-                                <input name="content" class="w-100 rounded-2 p-2 border pb-5" type="text" placeholder="Nhập lời nhắn của bạn">
-                                <p class="text-danger"><?= isset($err['content']) ? $err['content'] : '' ?></p>
-                            </div>
-
-                        </div>
-                        <input type="submit" name="btn-send" value="Gửi liện hệ" class="px-4 py-2 tw-text-white tw-bg-red-800 hover:tw-opacity-75 tw-border tw-rounded">
-                        <p class="text-danger my-3"><?= isset($noti) ? $noti : '' ?></p>
-
-                    </form>
-                </div>
-            </div>
+            
         </div>
     </main>
 </div>

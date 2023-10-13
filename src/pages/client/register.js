@@ -2,6 +2,7 @@ import { useEffect, useState } from "@/utilities";
 import { add } from "@/api";
 import { $, $$, isValidate } from "@/utilities/core";
 import { router } from "@/utilities";
+import Image from "@/asset";
 
 
 const Register = () => {
@@ -37,6 +38,7 @@ const Register = () => {
                     pass: pass.value,
                     role: 0,
                     createAt: new Date(),
+                    img: "http://res.cloudinary.com/djcimgjcc/image/upload/v1697091622/hltpfy4cll9ah2sd2pi4.png",
                     updateAt: null
                 }
                 console.log("object");
@@ -53,13 +55,13 @@ const Register = () => {
     console.log(err);
     return `
             <div
-            class="bg-[url('../../public/img/bnlogin.jpg')] relative min-h-screen w-full bg-no-repeat bg-cover">
+            class="bg-[url('http://res.cloudinary.com/djcimgjcc/image/upload/v1697166021/uxkoyydgghajfp6nfu7n.jpg')] relative min-h-screen w-full bg-no-repeat bg-cover">
             <div class="backdrop-blur-sm absolute inset-0 "></div>
             <div class="relative h-screen ">
                 <div
                     class="w-[600px] px-10 py-3 box-content absolute top-1/2  left-1/2 -translate-x-1/2 -translate-y-1/2   bg-white border rounded-md ">
                     <div>
-                        <h1 class="text-center font-semibold text-xl mb-8">Đăng ký</h1>
+                        <h1 class="text-center font-semibold text-2xl mb-10">Đăng ký</h1>
                     </div>
                     <form id="register">
                         <div class="flex gap-5">
@@ -99,10 +101,9 @@ const Register = () => {
                         </div>
                         <div class="flex flex-col gap-1 justify-center">
                             <button 
-                                class="btn-submit bg-red-700 border-2 mb-3 border-red-700 rounded-md p-4 text-white font-semibold hover:opacity-80 active:opacity-100 active:translate-y-[2px] transition-all ease-in-out">Đăng
+                                class="btn-submit bg-red-700 border-2 mb-7 border-red-700 rounded-md p-4 text-white font-semibold hover:opacity-80 active:opacity-100 active:translate-y-[2px] transition-all ease-in-out">Đăng
                                 ký</button>
-                            <a href="" class="text-center text-red-700 hover:underline">Đăng
-                                nhập</a>
+                            
                         </div>
                     </form>
                 </div>
@@ -111,4 +112,9 @@ const Register = () => {
     `
 }
 
+
+// <a href="" class="text-center text-red-700 hover:underline">Đăng
+//                                 nhập</a>
+
 export default Register;
+

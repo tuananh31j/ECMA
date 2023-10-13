@@ -127,7 +127,7 @@
     {
       "id": 1,
       "name": "Tuấn Anh",
-      "email": "Anhntph30476@fpt.edu.vn",
+      "email": "anhntph30476@fpt.edu.vn",
       "img": "https://picsum.photos/200/250",
       "pass": "111222",
       "role": "1",
@@ -325,13 +325,6 @@
       "updateAt": null
     }
   ],
-  "sizes": [
-    {
-      "id": 1,
-      "name": "L",
-      "product": 1
-    }
-  ],
   "banners": [
     {
       "id": 1,
@@ -388,38 +381,6 @@
       "updateAt": null
     }
   ],
-  "menus": [
-    {
-      "id": 1,
-      "path": "/",
-      "name": "Trang chủ"
-    },
-    {
-      "id": 2,
-      "path": "/shop",
-      "name": "Cửa hàng"
-    },
-    {
-      "id": 3,
-      "path": "/product",
-      "name": "Danh mục"
-    },
-    {
-      "id": 4,
-      "path": "/product",
-      "name": "Sản phẩm"
-    },
-    {
-      "id": 5,
-      "path": "/contact",
-      "name": "Liên hệ"
-    },
-    {
-      "id": 6,
-      "path": "/about",
-      "name": "Giới thiệu"
-    }
-  ],
   "categorys": [
     {
       "id": 1,
@@ -436,82 +397,6 @@
     {
       "id": 5,
       "name": " sữa"
-    },
-    {
-      "name": "coffe",
-      "id": 7
-    },
-    {
-      "name": "coffe",
-      "id": 8
-    },
-    {
-      "name": "đen đá",
-      "id": 9
-    },
-    {
-      "name": "đen đá",
-      "id": 10
-    },
-    {
-      "name": "Nam",
-      "id": 11
-    },
-    {
-      "name": "dfgsdf",
-      "id": 13
-    },
-    {
-      "id": 14,
-      "name": "gggg"
-    },
-    {
-      "name": "ds",
-      "id": 15
-    },
-    {
-      "name": "ds",
-      "id": 16
-    },
-    {
-      "name": "t",
-      "id": 17
-    },
-    {
-      "name": "t",
-      "id": 18
-    },
-    {
-      "name": "Nam",
-      "id": 19
-    },
-    {
-      "name": "Nam",
-      "id": 20
-    },
-    {
-      "name": "cxcx",
-      "id": 21
-    },
-    {
-      "name": "cxcx",
-      "id": 22
-    },
-    {
-      "name": "dfsdccxxxx",
-      "id": 24
-    },
-    {
-      "name": "Nam",
-      "id": 25
-    },
-    {
-      "name": "dsf",
-      "id": 26
-    },
-    {
-      "name": "g",
-      "id": 27
     }
   ]
 }

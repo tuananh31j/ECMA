@@ -2,9 +2,10 @@ import { getAll } from "@/api";
 import Banner from '@/components/banner';
 import { useState, useEffect } from "@/utilities";
 import Image from "@/asset";
+import Classes from "@/components/style/main.module.css";
+import { $ } from "../../utilities";
 let user = localStorage.getItem("user") ?? null
 const Header = () => {
-
     return `
             <header>
             <div class="bg-red-700 flex justify-between p-4 px-10 items-center">
@@ -24,10 +25,15 @@ const Header = () => {
                 ${user
             ? `
                         <div>
-                            <div class="flex gap-4 items-center">
+                            <div class="flex gap-4 items-center relative">
                                 <span class="text-white italic overflow-hidden  w-50 h-6 ">Xin chào! Nguyễn Tuấn Anh</span>
-                                <a href="/admin/dashboard">Admin</a>
-                                <img src="https://picsum.photos/200/250" class="w-10 h-10 border rounded-full"/>
+                                <img src="https://picsum.photos/200/250" class="userElement w-10 h-10 border rounded-full"/>
+                                <span class=" menuElement hidden absolute left-[77px]  w-40 h-48 top-4">
+                                    <ul class="text-white   absolute left-10 top-6  bg-white  rounded-md p-4 w-32 h-40">
+                                    <li class="hover:bg-slate-900 hover:text-white p-2 text-gray-900 rounded-md"><a href="/admin/dashboard">Admin</a></li>
+                                    <li class="hover:bg-slate-900 hover:text-white p-2 text-gray-900 rounded-md"><button class="btn-logout">Đăng xuất</button></li>
+                                    </ul>
+                                </span>
                             </div>
                
                         </div>`
@@ -49,8 +55,7 @@ const Header = () => {
                     CHỦ</a></li>
             <li><a href="/shop" class="hover:bg-amber-900 hover:text-white rounded-md p-2">CỬA
                     HÀNG</a></li>
-            <li><a href="/category" class="hover:bg-amber-900 hover:text-white rounded-md p-2">DANH
-                    MỤC</a></li>
+           
             <li><a href="product" class="hover:bg-amber-900 hover:text-white rounded-md p-2">SẢN
                     PHẨM</a></li>
             <li><a href="contact" class="hover:bg-amber-900 hover:text-white rounded-md p-2">LIÊN
@@ -60,15 +65,31 @@ const Header = () => {
         </ul>
             </nav>
 
-            <div>
-                <ul class="flex gap-2 p-5 text-red-700 underline">
-                    <li><a href="" class="">link/</a></li>
-                    <li><a href="" class="">link/</a></li>
-                    <li><a href="" class="">link/</a></li>
-                </ul>
-            </div>
+            
         </header>
     `
 }
 
+
+// {/* <div>
+//                 <ul class="flex gap-2 p-5 text-red-700 underline">
+//                     <li><a href="" class="">link/</a></li>
+//                     <li><a href="" class="">link/</a></li>
+//                     <li><a href="" class="">link/</a></li>
+//                 </ul>
+//             </div> */}
+
+
+// <li>
+// <div class="relative">
+// <span id="cate" class="hover:bg-amber-900 hover:text-white rounded-md p-2">DANH
+// MỤC</span>
+// <span class=" menuCate hidden absolute left-[0px]  w-40 h-48 top-1">
+// <ul class="text-white   absolute left-2 top-6  bg-white rounded-md p-4 w-32 h-40">
+
+// ${cates.map(item => `<li class="hover:bg-slate-900 p-2 text-gray-800 rounded-md"><a href="/admin/dashboard">${item.name}</a></li>`)}
+// </ul>
+// </span>
+// </div>
+// </li>
 export default Header;

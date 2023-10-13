@@ -6,14 +6,6 @@ import { $, $$ } from "@/utilities"
 const AddProduct = () => {
     const [err, setErr] = useState({})
     const [cates, setCategorys] = useState([]);
-    let a = 1;
-    useEffect(() => {
-        // getAll("categorys")
-        //     .then((res) => res.data)
-        //     .then((data) => setCategorys(data))
-        getAll("categorys")
-            .then(({ data }) => setCategorys(data))
-    }, [])
     useEffect(() => {
         const formElement = $("#formAddProduct");
         const inputName = $("#name");
@@ -23,8 +15,6 @@ const AddProduct = () => {
         const inputImage = $("#img");
         const inputDes = $("#des");
         const btn = $(".btn-submit");
-        const textElement = $(".textElement");
-        const loadElement = $(".loadElement");
 
         const errElement = Array.from($$(".errElement"));
 
@@ -34,25 +24,20 @@ const AddProduct = () => {
             btn.classList.add("rotate-[1000deg]")
 
             let errMessage = {};
-            let data = {};
-            let flag = inputAll.find(item => item.value == '');
+            let product = {};
+            let flag = inputAll.filter(item => item.value == '');
 
-            if (flag) {
+            if (flag.length > 0) {
                 errMessage.name = isValidate(inputName, "Chưa nhập tên sản phẩm!");
                 errMessage.sale = inputSale.value < 0 || inputSale.value > 100 ? "Chỉ giới hạn từ 1% - 99%" : '';
                 errMessage.price = isValidate(inputPrice, "Chưa nhập giá sản phẩm!");
                 errMessage.img = inputImage.files[0] ? '' : 'Chưa gửi ảnh!';
                 errMessage.cate = isValidate(inputCate, "Chưa chọn danh mục sản phẩm!");
                 errMessage.des = isValidate(inputDes, "Chưa nhập mô tả sản phẩm!");
-                // console.log(inputImage.files[0]);
-                // console.log(a++);
-                // console.log(flag);
                 setErr(errMessage);
 
             } else {
                 console.log(1);
-                // console.log(flag);
-                // console.log("fet");
                 const formData = new FormData;
                 let sale = inputSale.inputSale == "" ? 0 : inputSale.value
                 formData.append("file", inputImage.files[0]);
@@ -60,42 +45,82 @@ const AddProduct = () => {
 
                 // console.log(formData);
 
-                axios.post("https://api.cloudinary.com/v1_1/djcimgjcc/image/upload", formData, {
-                    headers: {
-                        "Content-Type": "aplication/form-data"
-                    }
-                })
-                    .then((res) => res.data)
-                    .then((data) => data.url)
-                    .then((url) => {
-                        console.log(url);
-                        return data = {
-                            name: inputName.value,
-                            des: inputDes.value,
-                            category_id: inputCate.value,
-                            sale: sale,
-                            view: 0,
-                            price: inputPrice.value,
-                            img: url,
-                            createAt: new Date()
+
+                (async () => {
+                    const { data } = await axios.post("https://api.cloudinary.com/v1_1/djcimgjcc/image/upload", formData, {
+                        headers: {
+                            "Content-Type": "aplication/form-data"
                         }
                     })
-                    .then((data) => add("products", data))
-                    .then(() => swal("Thêm thành công!", "", "success"))
-                    .then(() => {
-                        errElement.map(item => item.innerText = "")
-                        inputAll.map(item => item.value = "")
-                        btn.classList.remove("rotate-[1000deg]")
-                        console.log("done");
+                    product = {
+                        name: inputName.value,
+                        des: inputDes.value,
+                        category_id: inputCate.value,
+                        sale: sale,
+                        view: 0,
+                        price: inputPrice.value,
+                        img: data.url,
+                        createAt: new Date()
+                    }
+                    add("products", product)
+                        .then(() => swal("Thêm thành công!", "", "success"))
+                        .then(() => {
+                            errElement.map(item => item.innerText = "")
+                            inputAll.map(item => item.value = "")
+                            btn.classList.remove("rotate-[1000deg]")
+                            console.log("done");
 
-                    })
+                        })
+                })()
+
+
+                // axios.post("https://api.cloudinary.com/v1_1/djcimgjcc/image/upload", formData, {
+                //     headers: {
+                //         "Content-Type": "aplication/form-data"
+                //     }
+                // })
+                //     .then((res) => res.data)
+                //     .then((data) => data.url)
+                //     .then((url) => {
+                //         console.log(url);
+                //         return url;
+                //     })
+                //     .then((url) => {
+                //         console.log("ha");
+                //         return data = {
+                //             name: inputName.value,
+                //             des: inputDes.value,
+                //             category_id: inputCate.value,
+                //             sale: sale,
+                //             view: 0,
+                //             price: inputPrice.value,
+                //             img: url,
+                //             createAt: new Date()
+                //         }
+                //     })
+                //     .then((data) => add("products", data))
+                //     .then(() => swal("Thêm thành công!", "", "success"))
+                //     .then(() => {
+                //         errElement.map(item => item.innerText = "")
+                //         inputAll.map(item => item.value = "")
+                //         btn.classList.remove("rotate-[1000deg]")
+
+                //     })
+                //     .catch((e) => {
+                //         console.log(e, "vvv");
+                //     })
             }
         })
     })
+    useEffect(() => {
+        getAll("categorys")
+            .then(({ data }) => setCategorys(data))
+    }, [])
+
     return /*html*/ `
             <div id="content" class=" transition-all ease-in-out   w-full">
                 <div class=" w-full mt-24 ">
-                <h1 class="text-3xl font-semibold  text-center  mb-10">Thêm mới danh mục</h1>
+                <h1 class="text-3xl font-semibold  text-center  mb-10">Thêm mới sản phẩm</h1>
                 <p class="text-green-900 noti"></p>
                     <form id="formAddProduct" >
                         <div class="flex gap-36 items-center">

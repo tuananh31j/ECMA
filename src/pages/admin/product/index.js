@@ -71,7 +71,7 @@ const ListProduct = () => {
                                 <td class="border-2">${item.category_id}</td>
                                 <td class="border-2">${item.view}</td>
                                 <td class="border-2">${item.createAt}</td>
-                                <td class="border-2"><button class="btn-delete rounded-md bg-red-700 p-2 text-base text-white" data-id="${item.id}">Xóa</button> <a href="/admin/product/update/${item.id}"><button class="rounded-md bg-gray-700 p-2 text-base text-white" data-id="${item.id}">Sửa</button></a></td>
+                                <td class="border-2"><button class="btn-delete rounded-md bg-red-700 p-2 text-base text-white" data-id="${item.id}">Xóa</button> <a href="/admin/product/update/${item.id}"><button class="rounded-md bg-gray-700 p-2 text-base text-white">Sửa</button></a></td>
                             </tr>
                             `).join("")}
                         </tbody>

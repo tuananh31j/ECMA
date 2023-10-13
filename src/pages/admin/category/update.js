@@ -40,7 +40,7 @@ const UpdateCategory = (id) => {
     return /*html*/ `
             <div id="content" class=" transition-all ease-in-out duration-700  w-full">
                 <div class=" w-full mt-24 ">
-                <h1 class="text-3xl font-semibold  text-center  mb-10">Thêm mới danh mục</h1>
+                <h1 class="text-3xl font-semibold  text-center  mb-10">Chỉnh sửa danh mục</h1>
                 <p class="text-green-900 noti"></p>
                     <form id="formUpdateCategory">
                         <div>

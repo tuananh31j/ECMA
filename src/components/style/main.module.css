@@ -13,3 +13,20 @@
     grid-template-columns: 300px calc(100% - 400px);
 
 }
+
+.menuElement {
+    display: none;
+}
+
+.userElement {
+    display: inline;
+}
+
+.userElement:hover .menuElement {
+    display: block;
+}
+
+.pro {
+    display: grid;
+    grid-template-columns: 20% auto;
+}

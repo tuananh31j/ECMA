@@ -10,10 +10,10 @@ const HomePage = () => {
     const [banner, setBanner] = useState([]);
     const [products, setProducts] = useState([])
     useEffect(() => {
-        getAll("products")
+        getAll("products?_limit=8")
             .then(res => res.data)
             .then(data => data.sort((a, b) => b.id - a.id))
-            .then(result => setProducts(result.splice(0, 8)))
+            .then(result => setProducts(result))
     }, [])
 
     useEffect(() => {
@@ -69,7 +69,10 @@ const HomePage = () => {
 
     <!-- products -->
     <!-- new -->
+    <div class="px-10 my-20">
+    <h1 class="text-3xl my-10 font-bold">Sản phẩm mới nhất</h1>
     ${ListProNew(products)}
+    </div>
 </div>
     `
 

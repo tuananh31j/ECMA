@@ -1,6 +1,6 @@
 import { layoutAuth, LayoutAdmin, LayoutMain } from "./layout";
 import { render, useState, useEffect, $, $$, router } from "@/utilities";
-import { HomePage, AboutPage, ProductPage, Admin, Login, Register, ContactPage, ProDetailPage } from "@/pages/client";
+import { HomePage, AboutPage, ProductPage, Login, Register, ContactPage, ProDetailPage } from "@/pages/client";
 import Notfound from "./pages/client/notFound";
 import ChartPage from "./pages/admin/statistical";
 import ListBanner from "./pages/admin/banner";
@@ -11,7 +11,7 @@ import ListProduct from "./pages/admin/product";
 import UpdateCategory from "./pages/admin/category/update";
 import AddCategory from "./pages/admin/category/add";
 
-
+import UpdateBanner from "./pages/admin/banner/update";
 
 import AddProduct from "./pages/admin/product/add";
 import UpdateProduct from "./pages/admin/product/update";
@@ -49,6 +49,9 @@ router.on("/admin/category/add", () => LayoutAdmin(() => render(AddCategory, app
 router.on("/admin/customer", () => LayoutAdmin(() => render(ListCustomer, app)));
 router.on("/admin/customer/update/:id", ({ data }) => LayoutAdmin(() => render(UpdateCustomer, app, data.id)));
 router.on("/admin/customer/add", () => LayoutAdmin(() => render(AddCustomer, app)));
+//banner
+router.on("/admin/banner", () => LayoutAdmin(() => render(ListBanner, app)));
+router.on("/admin/banner/update/:id", ({ data }) => LayoutAdmin(() => render(UpdateBanner, app, data.id)));
 
 
 

@@ -54,13 +54,7 @@ const Dashboard = () => {
                             Thống kê
                         </li>
                     </a>
-                    <!-- đơn hàng -->
-                    <a class="text-white  " href="/admin/order">
-                        <li class="mt-3 hover:bg-amber-950 p-1 hover:text-white  hover:rounded-lg">
-                            <i class="hover:text-white fa-solid fa-box text-white"></i>
-                            Đơn hàng
-                        </li>
-                    </a>
+                    
                     <!-- Danh mục -->
                     <a class="text-white  " href="/admin/category">
                         <li class="mt-3 hover:bg-amber-950 p-1 hover:text-white  hover:rounded-lg">
@@ -68,13 +62,7 @@ const Dashboard = () => {
                             Danh mục
                         </li>
                     </a>
-                    <!-- size -->
-                    <a class="text-white  " href="/admin/size">
-                        <li class="mt-3 hover:bg-amber-950 p-1 hover:text-white  hover:rounded-lg">
-                            <i class="hover:text-white fa-solid fa-ruler-combined text-white"></i>
-                            Kích cỡ
-                        </li>
-                    </a>
+                   
                     <!-- Sản phẩm -->
                     <a class="text-white  " href="/admin/product">
                         <li class="mt-3 hover:bg-amber-950 p-1 hover:text-white  hover:rounded-lg">
@@ -96,21 +84,7 @@ const Dashboard = () => {
                             Khách hàng
                         </li>
                     </a>
-                    <!-- Bình luận -->
-                    <a class="text-white  " href="/admin/comment">
-                        <li class="mt-3 hover:bg-amber-950 p-1 hover:text-white  hover:rounded-lg">
-                            <i class="hover:text-white fa-solid fa-comments text-white"></i>
-                            Bình luận
-                        </li>
-                    </a>
                     
-                    <!-- Phản hồi -->
-                    <a class="text-white  " href="/admin/contact">
-                        <li class="mt-3 hover:bg-amber-950 p-1 hover:text-white  hover:rounded-lg">
-                            <i class="hover:text-white fa-solid fa-envelope text-white"></i>
-                            Liên hệ
-                        </li>
-                    </a>
                     <!-- Banner -->
                     <a class="text-white  " href="/admin/banner">
                         <li class="mt-3 hover:bg-amber-950 p-1 hover:text-white  hover:rounded-lg">
@@ -118,13 +92,7 @@ const Dashboard = () => {
                             Banner
                         </li>
                     </a>
-                    <a class="text-white  " href="index.php?url=banner&act=list">
-                        <li class="mt-3 hover:bg-amber-950 p-1 hover:text-white  hover:rounded-lg">
-                        <i
-                        class="hover:text-white fa-solid fa-right-from-bracket"></i>
-                            Đăng xuất
-                        </li>
-                    </a>
+                    
                 </ul>
             </nav>
            

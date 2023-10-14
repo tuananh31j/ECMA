@@ -1,6 +1,20 @@
+import { getAll } from "../../api";
+import Banner from "../../components/banner";
+import { useState } from "../../utilities";
+import { useEffect } from "../../utilities/hook";
 const AboutPage = () => {
+    const [banner, setBanner] = useState([]);
+
+    useEffect(() => {
+        (async () => {
+            const response = await getAll("banners");
+            const bannerData = response.data.find(item => item.menu == 4);
+            setBanner(bannerData);
+        })()
+    }, [])
     return `
-    <div class="main-content container my-5">
+    <div class="main-content container">
+    ${Banner(banner)}
     <main class="px-5 my-5">
         <div class="aboutUs-title">
             <h3 class="mb-5 tw-text-xl tw-font-semibold">Giới thiệu</h3>

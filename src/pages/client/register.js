@@ -3,38 +3,67 @@ import { add } from "@/api";
 import { $, $$, isValidate } from "@/utilities/core";
 import { router } from "@/utilities";
 import Image from "@/asset";
+import { getAll } from "../../api";
 
 
 const Register = () => {
     const [err, setErr] = useState([]);
-    useEffect(() => {
+    useEffect(async () => {
         const btn = $(".btn-submit");
         const user = $(".userName");
-        const email = $(".emailName");
+        const emailInput = $(".emailName");
         const pass = $(".pass");
-        const phone = $(".phone");
+        const phoneInput = $("#phone");
         const registerForm = $("#register");
         const inputAll = registerForm.querySelectorAll("input");
 
         const errMessage = {};
         let dataForm = {};
+        let { data } = await getAll("customers")
+        console.log(data, 'ff');
+
         registerForm.addEventListener("submit", (e) => {
             e.preventDefault();
+
+
+
             let arrInputAll = Array.from(inputAll);
             let vali = arrInputAll.find(element => element.value === '');
-            if (vali) {
+
+            let emailUnitd = data.find(item => item.email === emailInput.value);
+            let phoneUnitd = data.find(item => item.phone === phoneInput.value);
+            console.log(data);
+            if (vali || emailUnitd || phoneUnitd) {
+
                 errMessage.name = isValidate(user, "Chưa điền họ tên!");
-                errMessage.email = isValidate(email, "Chưa điền đại chỉ email!");
                 errMessage.pass = isValidate(pass, "Chưa điền mật khẩu!");
-                errMessage.phone = isValidate(phone, "Chưa điền số điện thoại!");
+                errMessage.phone = isValidate(phoneInput, "Chưa điền số điện thoại!");
+                if (emailInput.value == "") {
+                    errMessage.email = "Chưa nhập địa chỉ email";
+                } else if (emailUnitd) {
+                    errMessage.email = "Email tồn tại!";
+                    console.log(emailUnitd);
+                } else {
+                    errMessage.email = "";
+                }
+                if (phoneInput.value == "") {
+                    errMessage.phone = "Chưa nhập số điện thoại!";
+                } else if (phoneUnitd) {
+                    errMessage.phone = "Số điện thoại tồn tại!";
+
+                } else {
+                    errMessage.phone = "";
+                }
                 setErr(errMessage);
-                console.log(vali);
+                console.log('vali');
 
 
             } else {
+                console.log("object");
                 dataForm = {
                     name: user.value,
-                    email: email.value,
+                    email: emailInput.value,
+                    phone: phoneInput.value,
                     pass: pass.value,
                     role: 0,
                     createAt: new Date(),
@@ -44,15 +73,13 @@ const Register = () => {
                 console.log("object");
 
                 add("customers", dataForm)
-                    .then(() => { router.navigate("/login") })
-                    .then(() => console.log("ok"))
+                    .then(() => swal("Đăng ký thành công!", "", "success"))
 
             }
 
         })
     }, [err])
 
-    console.log(err);
     return `
             <div
             class="bg-[url('http://res.cloudinary.com/djcimgjcc/image/upload/v1697166021/uxkoyydgghajfp6nfu7n.jpg')] relative min-h-screen w-full bg-no-repeat bg-cover">
@@ -86,7 +113,7 @@ const Register = () => {
                                 <div class="h-[110px] mb-6">
                                     <lable for="phone" class="w-full">Số điện thoại <span
                                             class="text-red-700">*</span></lable>
-                                    <input class="phone border-2 rounded-md my-3  p-4 w-full"
+                                    <input id="phone" class=" border-2 rounded-md my-3  p-4 w-full"
                                         placeholder="Nhập số điện thoại" type="text" name="phone">
                                     <p class="text-red-700">${err.phone ?? ""}</p>
                                 </div>

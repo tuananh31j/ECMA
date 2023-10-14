@@ -53,8 +53,7 @@ const Header = () => {
                         class="fa-solid fa-house"></i>
                     TRANG
                     CHỦ</a></li>
-            <li><a href="/shop" class="hover:bg-amber-900 hover:text-white rounded-md p-2">CỬA
-                    HÀNG</a></li>
+           
            
             <li><a href="product" class="hover:bg-amber-900 hover:text-white rounded-md p-2">SẢN
                     PHẨM</a></li>

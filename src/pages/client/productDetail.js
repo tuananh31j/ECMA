@@ -22,7 +22,7 @@ const ProDetailPage = (id) => {
                     <div class="">
                         <h2 class="font-semibold uppercase text-3xl">${pro.name}</h2>
                         <div class="flex justify-between my-3 font-light">
-                        <p>Lượt xem: ${pro.view}</p>
+                        <p>Lượt xem: ${pro.view}</p>  
                             <p>Mã sản phẩm: ${pro.id}</p>
                         </div>
                         <p class="text-red-700 text-xl mt-auto flex-shrink-0"><span class="text-lg">${Math.round(pro.price - (pro.price * pro.sale / 100))}</span>

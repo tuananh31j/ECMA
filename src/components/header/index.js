@@ -9,7 +9,7 @@ const Header = () => {
     return `
             <header>
             <div class="bg-red-700 flex justify-between p-4 px-10 items-center">
-                <div class="w-[248px] "><div class="w-20"><img src="${Image.logo}" alt=""></div></div>
+                <div class="w-[248px] "><div class="w-20"><a href="/"><img src="${Image.logo}" alt=""></a></div></div>
 
                 <div>
                     <form action="" method="post">
@@ -26,11 +26,11 @@ const Header = () => {
             ? `
                         <div>
                             <div class="flex gap-4 items-center relative">
-                                <span class="text-white italic overflow-hidden  w-50 h-6 ">Xin chào! Nguyễn Tuấn Anh</span>
-                                <img src="https://picsum.photos/200/250" class="userElement w-10 h-10 border rounded-full"/>
+                                <span class="text-white italic  w-52 h-6 ">Xin chào! ${JSON.parse(user).name}</span>
+                                <img src="${JSON.parse(user).img}" class="userElement w-10 h-10 border rounded-full"/>
                                 <span class=" menuElement hidden absolute left-[77px]  w-40 h-48 top-4">
                                     <ul class="text-white   absolute left-10 top-6  bg-white  rounded-md p-4 w-32 h-40">
-                                    <li class="hover:bg-slate-900 hover:text-white p-2 text-gray-900 rounded-md"><a href="/admin/dashboard">Admin</a></li>
+                                    ${JSON.parse(user).role == 1 ? `<li class="hover:bg-slate-900 hover:text-white p-2 text-gray-900 rounded-md"><a href="/admin/dashboard">Admin</a></li>` : ''}
                                     <li class="hover:bg-slate-900 hover:text-white p-2 text-gray-900 rounded-md"><button class="btn-logout">Đăng xuất</button></li>
                                     </ul>
                                 </span>
@@ -47,7 +47,7 @@ const Header = () => {
             </div>
 
             <nav>
-            <ul class="flex justify-between px-5 my-3 items-center font-bold text-red-700">
+            <ul class="flex  justify-between px-5  mt-10 text-lg items-center font-bold text-red-700">
             <li><a href="/"
                     class="hover:bg-amber-900 hover:text-white rounded-md p-2 flex items-center gap-4"><i
                         class="fa-solid fa-house"></i>
@@ -55,6 +55,7 @@ const Header = () => {
                     CHỦ</a></li>
            
            
+            <li><a href="/shop" class="hover:bg-amber-900 hover:text-white rounded-md p-2">CỬA HÀNG</a></li>
             <li><a href="product" class="hover:bg-amber-900 hover:text-white rounded-md p-2">SẢN
                     PHẨM</a></li>
             <li><a href="contact" class="hover:bg-amber-900 hover:text-white rounded-md p-2">LIÊN

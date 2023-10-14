@@ -6,9 +6,10 @@ const UpdateCustomer = (id) => {
     const [err, setErr] = useState({});
     const [user, setUser] = useState({});
 
-    useEffect(() => {
+    useEffect(async () => {
         const formElement = $("#formUpdateCustomer");
         const inputName = $("#name");
+        const inputPhone = $("#phone");
         const inputEmail = $("#email");
         const inputpass = $("#pass");
         const inputRole = [...$$("input[name='role']")];
@@ -17,23 +18,41 @@ const UpdateCustomer = (id) => {
         const btn = $(".btn-submit");
 
         const errElement = Array.from($$(".errElement"));
+        let { data } = await getAll("customers")
 
-        const inputAll = Array.from(formElement.querySelectorAll("input"));
         formElement.addEventListener("submit", (e) => {
             e.preventDefault();
             btn.classList.add("rotate-[1000deg]")
 
             let errMessage = {};
             let customer = {};
-            if (inputName.value == "" || inputPass.value == "" || inputEmail.value == "") {
+            let emailUnited = data.find(item => item.email === inputEmail.value)?.email !== user.email && data.find(item => item.email === inputEmail.value)?.email != undefined ? true : false;
+            let phoneUnited = data.find(item => item.phone === inputPhone.value)?.phone !== user.phone && data.find(item => item.phone === inputPhone.value)?.phone != undefined ? true : false;
+            if (inputName.value == "" || inputPass.value == "" || inputEmail.value == "" || emailUnited || phoneUnited || inputPhone.value == "") {
+                console.log(data.find(item => item.phone === inputPhone.value)?.phone);
+                console.log(inputPhone.value, "ds");
                 errMessage.name = isValidate(inputName, "Chưa nhập tên người dùng!");
-                errMessage.email = isValidate(inputEmail, "Chưa nhập email người dùng!");
                 errMessage.pass = isValidate(inputpass, "Chưa nhập mật khẩu người dùng!");
+                if (inputEmail.value == "") {
+                    errMessage.email = "Chưa nhập địa chỉ email";
+                } else if (emailUnited) {
+                    errMessage.email = "Email tồn tại!";
+                } else {
+                    errMessage.email = "";
+                }
+                if (inputPhone.value == "") {
+                    errMessage.phone = "Chưa nhập số điện thoại!";
+                } else if (phoneUnited) {
+                    errMessage.phone = "Số điện thoại tồn tại!";
+
+                } else {
+                    errMessage.phone = "";
+                }
                 setErr(errMessage);
             } else {
                 const role = inputRole.find((item) => item.checked)
-                console.log(role.value);
-                console.log(typeof inputRole);
+                console.log(inputRole);
+                console.log(inputPhone.value, "ds");
 
                 (async () => {
                     if (inputImage.files[0]) {
@@ -49,6 +68,7 @@ const UpdateCustomer = (id) => {
                             id: user.id,
                             name: inputName.value,
                             email: inputEmail.value,
+                            phone: inputPhone.value,
                             pass: inputPass.value,
                             img: data.url,
                             role: role.value,
@@ -59,7 +79,6 @@ const UpdateCustomer = (id) => {
                             .then(() => swal("Cập nhật thành công!", "", "success"))
                             .then(() => {
                                 errElement.map(item => item.innerText = "")
-                                inputAll.map(item => item.value = "")
                                 btn.classList.remove("rotate-[1000deg]")
                                 console.log("done");
                             })
@@ -68,6 +87,7 @@ const UpdateCustomer = (id) => {
                             id: user.id,
                             name: inputName.value,
                             email: inputEmail.value,
+                            phone: inputPhone.value,
                             pass: inputPass.value,
                             img: user.img,
                             role: role.value,
@@ -78,7 +98,6 @@ const UpdateCustomer = (id) => {
                             .then(() => swal("Thêm thành công!", "", "success"))
                             .then(() => {
                                 errElement.map(item => item.innerText = "")
-                                inputAll.map(item => item.value = "")
                                 btn.classList.remove("rotate-[1000deg]")
                                 console.log("done");
                             })
@@ -112,6 +131,11 @@ const UpdateCustomer = (id) => {
                                     <label for="email" class="text-xl font-semibold mb-2">Email:</label></br>
                                     <input value="${user.email}" placeholder="Nhập địa chỉ email" class="border-2 p-3 w-full  border-black rounded-md focus:border-4 focus:border-gray-700" type="text" name="email" id="email">
                                     <p class="text-red-700 errElement">${err.email ?? ''}</p>
+                                </div>
+                                <div>
+                                    <label for="phone" class="text-xl font-semibold mb-2">Điên thoại:</label></br>
+                                    <input placeholder="Nhập số điện thoại" value="${user.phone}" class="border-2 p-3 w-full  border-black rounded-md focus:border-4 focus:border-gray-700" type="text" name="phone" id="phone">
+                                    <p class="text-red-700 errElement">${err.phone ?? ''}</p>
                                 </div>
                                 <div class="my-3">
                                     <label for="" class="text-xl font-semibold mb-2">Vai trò:</label></br>

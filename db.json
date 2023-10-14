@@ -1,403 +1,252 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Trà sữa socola",
-      "des": "trà sữa được làm từ sữa",
-      "category_id": 1,
-      "sale": 20,
-      "view": 3,
-      "price": "300000",
-      "img": "https://picsum.photos/200/250",
-      "createAt": "2023-01-02",
-      "updateAt": null
+      "name": "PHIN SỮA ĐÁ",
+      "des": "Hương vị cà phê Việt Nam đích thực! Từng hạt cà phê hảo hạng được chọn bằng tay, phối trộn độc đáo giữa hạt Robusta từ cao nguyên Việt Nam, thêm Arabica thơm lừng. Cà phê được pha từ Phin truyền thống, hoà cùng sữa đặc sánh và thêm vào chút đá tạo nên ly Phin Sữa Đá – Đậm Đà Chất Phin.",
+      "category_id": "1",
+      "sale": "4",
+      "view": 0,
+      "price": "60000",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697253504/ncjphfvwbpcvo8lohix7.jpg",
+      "createAt": "2023-10-14T03:18:24.173Z",
+      "id": 1
     },
     {
-      "name": "Nam",
-      "des": "dff",
-      "category_id": "3",
+      "name": "PHIN ĐEN ĐÁ",
+      "des": "Dành cho những tín đồ cà phê đích thực! Hương vị cà phê truyền thống được phối trộn độc đáo tại Highlands. Cà phê đậm đà pha hoàn toàn từ Phin, cho thêm 1 thìa đường, một ít đá viên mát lạnh, tạo nên Phin Đen Đá mang vị cà phê đậm đà chất Phin.",
+      "category_id": "1",
       "sale": "33",
       "view": 0,
-      "price": "6",
-      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697023673/n1e5n58w9hbib5epbbku.jpg",
-      "createAt": "2023-10-11T11:27:54.542Z",
+      "price": "40000",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697253535/izfotfhf9bzgnshoepun.jpg",
+      "createAt": "2023-10-14T03:18:55.659Z",
       "id": 2
     },
     {
-      "name": "Nam",
-      "des": "dff",
-      "category_id": "3",
-      "sale": "33",
+      "name": "BẠC XỈU ĐÁ",
+      "des": "Nếu Phin Sữa Đá dành cho các bạn đam mê vị đậm đà, thì Bạc Xỉu Đá là một sự lựa chọn nhẹ “đô\" cà phê nhưng vẫn thơm ngon, chất lừ không kém!",
+      "category_id": "1",
+      "sale": "5",
       "view": 0,
-      "price": "6",
-      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697023674/slbyp0rib02subebkmtn.jpg",
-      "createAt": "2023-10-11T11:27:55.113Z",
+      "price": "50000",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697253572/ak1l4kxjxfkmergteg6w.jpg",
+      "createAt": "2023-10-14T03:19:33.216Z",
       "id": 3
     },
     {
-      "name": "Nam",
-      "des": "dff",
-      "category_id": "5",
-      "sale": "33",
+      "name": "Trà thạch đào",
+      "des": "Vị trà đậm đà kết hợp cùng những miếng đào thơm ngon mọng nước cùng thạch đào giòn dai. Thêm vào ít sữa để gia tăng vị béo.",
+      "category_id": "3",
+      "sale": "10",
       "view": 0,
-      "price": "5434",
-      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697023942/h9mqoqljeo3vvsty9qnu.jpg",
-      "createAt": "2023-10-11T11:32:23.788Z",
+      "price": "55000",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697253628/tvtea327qkmslscw8cvu.jpg",
+      "createAt": "2023-10-14T03:20:28.392Z",
       "id": 4
     },
     {
-      "name": "Nam",
-      "des": "dff",
-      "category_id": "5",
-      "sale": "33",
+      "name": "TRÀ SEN VÀNG (SEN)",
+      "des": "TRÀ SEN VÀNG (SEN)",
+      "category_id": "3",
+      "sale": "2",
       "view": 0,
-      "price": "5434",
-      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697023942/uz3z4blajc93oniunvjg.jpg",
-      "createAt": "2023-10-11T11:32:23.855Z",
+      "price": "44000",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697253656/dl3tgwcgd10qosvgqhh5.jpg",
+      "createAt": "2023-10-14T03:20:56.871Z",
       "id": 5
     },
     {
-      "name": "Nam",
-      "des": "hhhhh",
-      "category_id": "4",
-      "sale": "33",
+      "name": "FREEZE SÔ-CÔ-LA",
+      "des": "FREEZE SÔ-CÔ-LA",
+      "category_id": "5",
+      "sale": "10",
       "view": 0,
-      "price": "6",
-      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697024024/ya9wvgrdd2jjxokcammr.jpg",
-      "createAt": "2023-10-11T11:33:44.922Z",
+      "price": "88000",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697253735/y68b2sb5k0rcahdmsfne.jpg",
+      "createAt": "2023-10-14T03:22:15.361Z",
       "id": 6
     },
     {
-      "name": "Nam",
-      "des": "hhhhh",
-      "category_id": "4",
-      "sale": "33",
+      "id": 7,
+      "name": "COOKIES & CREAM",
+      "des": "Một thức uống ngon lạ miệng bởi sự kết hợp hoàn hảo giữa cookies sô cô la giòn xốp cùng hỗn hợp sữa tươi cùng sữa đặc đem say với đá viên, và cuối cùng không thể thiếu được chính là lớp kem whip mềm mịn cùng cookies sô cô la say nhuyễn.",
+      "category_id": "5",
+      "sale": "22",
       "view": 0,
-      "price": "6",
-      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697024024/hyqmzekl8tz0wozfzvve.jpg",
-      "createAt": "2023-10-11T11:33:45.287Z",
-      "id": 7
+      "price": "70000",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697253773/w97dki0rjppggyauid0o.jpg",
+      "createAt": "2023-10-14T03:24:05.467Z"
     },
     {
-      "name": "g",
-      "des": "hhh",
-      "category_id": "5",
-      "sale": "4",
+      "name": "PHINDI KEM SỮA",
+      "des": "Một thức uống ngon lạ miệng bởi sự kết hợp hoàn hảo giữa cookies sô cô la giòn xốp cùng hỗn hợp sữa tươi cùng sữa đặc đem say với đá viên, và cuối cùng không thể thiếu được chính là lớp kem whip mềm mịn cùng cookies sô cô la say nhuyễn.",
+      "category_id": "2",
+      "sale": "6",
       "view": 0,
-      "price": "50",
-      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697036792/m8kh87rbs1randehfef0.jpg",
-      "createAt": "2023-10-11T15:06:33.071Z",
+      "price": "66000",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697253888/nj5t28xbzzowrjfk85wk.jpg",
+      "createAt": "2023-10-14T03:24:48.829Z",
       "id": 8
     },
     {
-      "name": "g",
-      "des": "hhh",
-      "category_id": "5",
-      "sale": "4",
+      "name": "TRÀ XANH ĐẬU ĐỎ",
+      "des": "TRÀ XANH ĐẬU ĐỎ",
+      "category_id": "3",
+      "sale": "20",
       "view": 0,
-      "price": "50",
-      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697036792/eedwhjltbqbqxesnajh0.jpg",
-      "createAt": "2023-10-11T15:06:33.205Z",
+      "price": "56000",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697253916/be5bcxcznfi7w6eorvtc.jpg",
+      "createAt": "2023-10-14T03:25:16.601Z",
       "id": 9
     },
     {
-      "name": "g",
-      "des": "hhh",
-      "category_id": "4",
-      "sale": "6",
+      "name": "TRÀ THANH ĐÀO",
+      "des": "Một trải nghiệm thú vị khác! Sự hài hòa giữa vị trà cao cấp, vị sả thanh mát và những miếng đào thơm ngon mọng nước sẽ mang đến cho bạn một thức uống tuyệt vời.",
+      "category_id": "3",
+      "sale": "3",
       "view": 0,
-      "price": "6",
-      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697036863/r5o7qrgkj5mrjlemrcfi.jpg",
-      "createAt": "2023-10-11T15:07:44.233Z",
+      "price": "44000",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697253944/yt1jgozzrbtsqsi8wsw6.jpg",
+      "createAt": "2023-10-14T03:25:44.811Z",
       "id": 10
     },
     {
-      "name": "g",
-      "des": "hhh",
-      "category_id": "4",
-      "sale": "6",
+      "name": "TRÀ THẠCH VẢI",
+      "des": "Một trải nghiệm thú vị khác! Sự hài hòa giữa vị trà cao cấp, vị sả thanh mát và những miếng đào thơm ngon mọng nước sẽ mang đến cho bạn một thức uống tuyệt vời.",
+      "category_id": "3",
+      "sale": "22",
       "view": 0,
-      "price": "6",
-      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697036863/skyntycjjjkce1nepp9b.jpg",
-      "createAt": "2023-10-11T15:07:44.333Z",
+      "price": "54000",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697253972/jdhzhf8wcsvi3n2szorl.jpg",
+      "createAt": "2023-10-14T03:26:12.928Z",
       "id": 11
+    },
+    {
+      "name": "TRÀ SEN VÀNG (CỦ NĂNG)",
+      "des": "Thức uống chinh phục những thực khách khó tính! Sự kết hợp độc đáo giữa trà Ô long, hạt sen thơm bùi và củ năng giòn tan. Thêm vào chút sữa sẽ để vị thêm ngọt ngào.",
+      "category_id": "3",
+      "sale": "50",
+      "view": 0,
+      "price": "56000",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697254014/gussdx4u8iiflgi4iifs.jpg",
+      "createAt": "2023-10-14T03:26:54.640Z",
+      "id": 12
+    },
+    {
+      "name": "FREEZE TRÀ XANH",
+      "des": "FREEZE TRÀ XANH Thức uống rất được ưa chuộng! Trà xanh thượng hạng từ cao nguyên Việt Nam, kết hợp cùng đá xay, thạch trà dai dai, thơm ngon và một lớp kem dày phủ lên trên vô cùng hấp dẫn. Freeze Trà Xanh thơm ngon, mát lạnh, chinh phục bất cứ ai!",
+      "category_id": "5",
+      "sale": "12",
+      "view": 0,
+      "price": "87000",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697254046/tfmct3wnwmzxi86vhfs2.jpg",
+      "createAt": "2023-10-14T03:27:26.676Z",
+      "id": 13
+    },
+    {
+      "id": 14,
+      "name": "CARAMEL PHIN FREEZE",
+      "des": "Thơm ngon khó cưỡng! Được kết hợp từ cà phê truyền thống chỉ có tại Highlands Coffee, cùng với caramel, thạch cà phê và đá xay mát lạnh. Trên cùng là lớp kem tươi thơm béo và caramel ngọt ngào. Món nước phù hợp trong những cuộc gặp gỡ bạn bè, bởi sự ngọt ngào thường mang mọi người xích lại gần nhau.",
+      "category_id": "5",
+      "sale": "14",
+      "view": 0,
+      "price": "67000",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697254075/snlpyjhtp7gufu1ithpb.jpg",
+      "createAt": "2023-10-14T03:28:28.542Z"
     }
   ],
   "customers": [
     {
-      "id": 1,
-      "name": "Tuấn Anh",
+      "name": "Nguyễn Tuấn Anh",
       "email": "anhntph30476@fpt.edu.vn",
-      "img": "https://picsum.photos/200/250",
-      "pass": "111222",
+      "pass": "1122",
+      "phone": "11111",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697255892/afkvis36xyhbvl5ikamv.jpg",
       "role": "1",
-      "createAt": "2023-01-02",
+      "createAt": "2023-10-14T03:58:12.519Z",
+      "updateAt": null,
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Nam",
+      "email": "user@gmail.com",
+      "phone": "12132123",
+      "pass": "1122",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697258011/einszxyqcgmr8q3rnfer.jpg",
+      "role": "0",
+      "createAt": "2023-10-14T16:46:52.419Z",
       "updateAt": null
     },
     {
-      "name": "Nam",
-      "email": "tunanhk@gmail.com",
-      "pass": "dc",
-      "role": 0,
-      "createAt": "2023-10-08T01:15:02.616Z",
-      "updateAt": null,
-      "id": 2
-    },
-    {
-      "name": "Nam",
-      "email": "tunanhk@gmail.com",
-      "pass": "xs",
-      "role": 0,
-      "createAt": null,
+      "name": "Lemon",
+      "email": "lemon@gmail.com",
+      "phone": "1233434",
+      "pass": "1122",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697306264/nijwrwd8af9qhe1nsub4.jpg",
+      "role": "0",
+      "createAt": "2023-10-14T17:57:44.329Z",
       "updateAt": null,
       "id": 3
     },
     {
-      "name": "Nam",
-      "email": "tunanhk@gmail.com",
-      "pass": "dfdf",
-      "role": 0,
-      "createAt": null,
+      "name": "ok",
+      "email": "ok@gmail.com",
+      "phone": "5432234",
+      "pass": "1122",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697306352/ucudm9fuirmxlz4usddv.png",
+      "role": "0",
+      "createAt": "2023-10-14T17:59:12.258Z",
       "updateAt": null,
       "id": 4
-    },
-    {
-      "name": "Nam",
-      "email": "tuananhcbqqo@gmail.com",
-      "pass": "hgfd",
-      "role": 0,
-      "createAt": null,
-      "updateAt": null,
-      "id": 5
-    },
-    {
-      "name": "Namdfsdf",
-      "email": "tunanhk@gmail.com",
-      "pass": "dfsdf",
-      "role": 0,
-      "createAt": "2023-10-08T03:59:53.969Z",
-      "updateAt": null,
-      "id": 6
-    },
-    {
-      "name": "Nam",
-      "email": "tuan@gamil.com",
-      "pass": "b",
-      "role": 0,
-      "createAt": "2023-10-08T04:01:04.899Z",
-      "updateAt": null,
-      "id": 7
-    },
-    {
-      "name": "Namto",
-      "email": "tuananhcbqqo@gmail.com",
-      "pass": "sdsd",
-      "role": 0,
-      "createAt": "2023-10-08T07:55:10.110Z",
-      "updateAt": null,
-      "id": 8
-    },
-    {
-      "name": "Namto",
-      "email": "tuananhcbqqo@gmail.com",
-      "pass": "sdsd",
-      "role": 0,
-      "createAt": "2023-10-08T07:55:10.114Z",
-      "updateAt": null,
-      "id": 9
-    },
-    {
-      "name": "Namto",
-      "email": "tuananhcbqqo@gmail.com",
-      "pass": "sdsd",
-      "role": 0,
-      "createAt": "2023-10-08T07:55:22.014Z",
-      "updateAt": null,
-      "id": 10
-    },
-    {
-      "name": "Namto",
-      "email": "tuananhcbqqo@gmail.com",
-      "pass": "sdsd",
-      "role": 0,
-      "createAt": "2023-10-08T07:55:22.016Z",
-      "updateAt": null,
-      "id": 11
-    },
-    {
-      "name": "Namtosd",
-      "email": "tuananhcbqqo@gmail.com",
-      "pass": "sdsd",
-      "role": 0,
-      "createAt": "2023-10-08T07:55:28.207Z",
-      "updateAt": null,
-      "id": 12
-    },
-    {
-      "name": "Namtosd",
-      "email": "tuananhcbqqo@gmail.com",
-      "pass": "sdsd",
-      "role": 0,
-      "createAt": "2023-10-08T07:55:28.208Z",
-      "updateAt": null,
-      "id": 13
-    },
-    {
-      "name": "Namtosd",
-      "email": "tuananhcbqqo@gmail.com",
-      "pass": "sdsd",
-      "role": 0,
-      "createAt": "2023-10-08T07:55:30.405Z",
-      "updateAt": null,
-      "id": 14
-    },
-    {
-      "name": "Namtosd",
-      "email": "tuananhcbqqo@gmail.com",
-      "pass": "sdsd",
-      "role": 0,
-      "createAt": "2023-10-08T07:55:30.407Z",
-      "updateAt": null,
-      "id": 15
-    },
-    {
-      "name": "Namtosd",
-      "email": "tuananhcbqqo@gmail.com",
-      "pass": "sdsd",
-      "role": 0,
-      "createAt": "2023-10-08T07:55:31.447Z",
-      "updateAt": null,
-      "id": 16
-    },
-    {
-      "name": "Namtosd",
-      "email": "tuananhcbqqo@gmail.com",
-      "pass": "sdsd",
-      "role": 0,
-      "createAt": "2023-10-08T07:55:31.449Z",
-      "updateAt": null,
-      "id": 17
-    },
-    {
-      "name": "ccc",
-      "email": "tuananhcbqqo@gmail.com",
-      "pass": "cs",
-      "role": 0,
-      "createAt": "2023-10-08T08:01:13.547Z",
-      "updateAt": null,
-      "id": 22
-    },
-    {
-      "name": "ccc",
-      "email": "tuananhcbqqo@gmail.com",
-      "pass": "cs",
-      "role": 0,
-      "createAt": "2023-10-08T08:01:13.552Z",
-      "updateAt": null,
-      "id": 23
-    },
-    {
-      "name": "Nguyễn Tuấn Anh",
-      "email": "Ta@gmail.com",
-      "pass": "9900",
-      "role": 0,
-      "createAt": "2023-10-08T13:31:10.230Z",
-      "updateAt": null,
-      "id": 24
-    },
-    {
-      "name": "binh",
-      "email": "binh@gmail.com",
-      "pass": "1122",
-      "role": 0,
-      "createAt": "2023-10-08T16:16:19.030Z",
-      "updateAt": null,
-      "id": 25
-    },
-    {
-      "name": "Nguyễn Tuấn Anh",
-      "email": "anh@gmail.com",
-      "phone": "11111",
-      "pass": "1122",
-      "role": 0,
-      "createAt": "2023-10-14T01:10:07.811Z",
-      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697091622/hltpfy4cll9ah2sd2pi4.png",
-      "updateAt": null,
-      "id": 26
-    },
-    {
-      "name": "Nam",
-      "email": "sdsd@fpt.edu.vn",
-      "phone": "2211",
-      "pass": "1122",
-      "role": 0,
-      "createAt": "2023-10-14T01:11:35.193Z",
-      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697091622/hltpfy4cll9ah2sd2pi4.png",
-      "updateAt": null,
-      "id": 27
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "content": "helo",
-      "customer": 1,
-      "product": 1,
-      "createAt": "2023-01-02",
-      "updateAt": null
     }
   ],
   "banners": [
     {
       "id": 1,
-      "img_url": "https://picsum.photos/200/250",
-      "product": 1,
-      "menu": 1,
       "name": "Trà sữa socola",
-      "createAt": "2023-01-02",
-      "updateAt": null
+      "img_url": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697254412/i2s8dnfdjof4e6nu32xz.jpg",
+      "menu": 1
     },
     {
       "id": 2,
-      "img_url": "https://picsum.photos/200/250",
-      "product": 1,
-      "menu": 2,
       "name": "Trà sữa socola",
-      "createAt": "2023-01-02",
-      "updateAt": null
+      "img_url": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697254393/dpt4nc5wffog2hcqk93t.jpg",
+      "menu": 2
     },
     {
       "id": 3,
-      "img_url": "https://picsum.photos/200/250",
-      "product": 1,
-      "menu": 3,
       "name": "Trà sữa socola",
-      "createAt": "2023-01-02",
-      "updateAt": null
+      "img_url": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697254363/zpflml5jtfj8s6mv9w2n.jpg",
+      "menu": 3
     },
     {
       "id": 4,
       "name": "Trà sữa socola44",
-      "img_url": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697220279/ec7bq8mdedcvtiqnuvep.jpg",
+      "img_url": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697254281/mi5enbrdfv2qnormalxw.jpg",
       "menu": 4
     }
   ],
   "categorys": [
     {
-      "id": 1,
-      "name": "Nam"
+      "name": "Cà phê",
+      "id": 1
     },
     {
-      "id": 3,
-      "name": " sữa"
+      "name": "Phindi",
+      "id": 2
+    },
+    {
+      "name": "Trà",
+      "id": 3
     },
     {
       "id": 4,
-      "name": "Trà "
+      "name": "CaCao"
     },
     {
-      "id": 5,
-      "name": " sữa"
+      "name": "FREEZE",
+      "id": 5
     }
   ]
 }

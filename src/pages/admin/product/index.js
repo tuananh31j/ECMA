@@ -1,6 +1,7 @@
 import { getAll, remove } from "@/api";
 import { useState, useEffect, router, $$ } from "@/utilities";
 import swal from "sweetalert";
+import { $ } from "../../../utilities";
 const ListProduct = () => {
     const [product, setProduct] = useState([]);
     useEffect(() => {
@@ -13,6 +14,18 @@ const ListProduct = () => {
         const btnDeleteElement = Array.from($$(".btn-delete"));
         const desMoreElement = Array.from($$(".desMore"));
         const desElement = Array.from($$(".desElement"));
+        const moreDesElement = Array.from($$(".moreDes"));
+        const moreElement = Array.from($$(".more"));
+
+        moreDesElement.map((item, i) => {
+            item.addEventListener("mouseenter", () => {
+                moreElement[i].classList.remove("hidden")
+            })
+            item.addEventListener("mouseleave", () => {
+                moreElement[i].classList.add("hidden")
+            })
+        })
+
 
         desElement.map((item, i) => item.addEventListener("click", (e) => {
             e.target.nextElementSibling.classList.toggle("hidden");
@@ -65,12 +78,12 @@ const ListProduct = () => {
                                 <td class="border-2">${i + 1}</td>
                                 <td class="border-2"><img src="${item.img}" class="w-10 h-10 object-cover" /></td>
                                 <td class="border-2">${item.name}</td>
-                                <td class="border-2" >${item.des}</span></td>
+                                <td class="border-2 w-16 relative" >${item.des.slice(0, 10)} ${item.des.split("").length > 10 ? "<span class='moreDes'>...</span>" : ""}<span  class="absolute w-80 more z-10 hidden h-60 bg-white text-black border-2 border-red-700 p-4 rounded-md ">${item.des}</span></td>
                                 <td class="border-2">${item.sale}</td>
                                 <td class="border-2">${item.price}</td>
                                 <td class="border-2">${item.category_id}</td>
                                 <td class="border-2">${item.view}</td>
-                                <td class="border-2">${item.createAt}</td>
+                                <td class="border-2 w-10">${item.createAt}</td>
                                 <td class="border-2"><button class="btn-delete rounded-md bg-red-700 p-2 text-base text-white" data-id="${item.id}">Xóa</button> <a href="/admin/product/update/${item.id}"><button class="rounded-md bg-gray-700 p-2 text-base text-white">Sửa</button></a></td>
                             </tr>
                             `).join("")}

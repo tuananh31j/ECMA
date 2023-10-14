@@ -1,5 +1,6 @@
 import { useEffect, useState } from "../../utilities";
 import { $ } from "../../utilities";
+const user = localStorage.getItem("user");
 
 const Dashboard = () => {
 
@@ -22,17 +23,17 @@ const Dashboard = () => {
                     <li>
                         <div class="flex gap-2  items-center">
                             <div class=" h-10 w-10">
-                                <img src="https://picsum.photos/200/250"
+                                <img src="${JSON.parse(user).img}"
                                     class="rounded-full object-cover  w-full h-full" alt="">
 
                             </div>
                             <div class="flex gap-11 items-center">
                                 <div class="">
                                     <p class="m-0 text-white">
-                                        nguyễn tuấn anh
+                                        ${JSON.parse(user).name}
                                     </p>
                                     <p class="font-light m-0 italic text-white">
-                                        tuan@gmail.com
+                                    ${JSON.parse(user).email}
                                     </p>
                                 </div>
 

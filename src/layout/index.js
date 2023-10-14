@@ -12,7 +12,7 @@ const appElement = $("#app");
 
 
 const LayoutMain = async (content) => {
-    
+
     rootElement.classList.remove(`${Classes.admin}`);
     appElement.classList.remove("w-[1160px]")
     appElement.classList.remove("-translate-x-[300px]")
@@ -76,5 +76,6 @@ const LayoutAdmin = async (content) => {
     headerElement.innerHTML = Dashboard();
     content();
     footerElement.innerHTML = "";
+    
 }
 export { layoutAuth, LayoutAdmin, LayoutMain };

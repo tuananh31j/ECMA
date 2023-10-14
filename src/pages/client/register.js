@@ -74,6 +74,9 @@ const Register = () => {
 
                 add("customers", dataForm)
                     .then(() => swal("Đăng ký thành công!", "", "success"))
+                    .then(() => inputAll.forEach(element => {
+                        element.value = '';
+                    }))
 
             }
 

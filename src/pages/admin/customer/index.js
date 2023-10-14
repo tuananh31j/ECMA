@@ -49,6 +49,7 @@ const ListCustomer = () => {
                             <th class='border-2 border-black'>Ảnh</th>
                             <th class="border-2 border-black">Tên</th>
                             <th class="border-2 border-black">Email</th>
+                            <th class="border-2 border-black">Số điện thoại</th>
                             <th class="border-2 border-black">Ngày tạo</th>
                             <th class="border-2 border-black">Vai trò</th>
                             <th class="border-2 border-black">Chức năng</th>
@@ -60,6 +61,7 @@ const ListCustomer = () => {
                                 <td class="border-2"><img src="${item.img}" class="w-10 h-10 object-cover" /></td>
                                 <td class="border-2">${item.name}</td>
                                 <td class="border-2" >${item.email}</span></td>
+                                <td class="border-2" >${item.phone}</span></td>
                                 <td class="border-2">${item.createAt}</td>
                                 <td class="border-2">${item.role == 1 ? "<span class='text-red-700'>Admin</span>"
             : "<span class='text-green-900'>User</span>"

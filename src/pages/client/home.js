@@ -2,7 +2,7 @@ import ItemProduct from "../../components/product/item";
 import { get, getAll } from "@/api";
 import { useEffect, useState } from "@/utilities";
 import Banner from "@/components/banner";
-import { ListProNew } from "../../components/product";
+import { ListPro } from "../../components/product";
 import Image from "../../asset";
 
 
@@ -71,7 +71,7 @@ const HomePage = () => {
     <!-- new -->
     <div class="px-10 my-20">
     <h1 class="text-3xl my-10 font-bold">Sản phẩm mới nhất</h1>
-    ${ListProNew(products)}
+    ${ListPro(products)}
     </div>
 </div>
     `

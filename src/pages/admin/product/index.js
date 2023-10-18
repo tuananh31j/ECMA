@@ -4,11 +4,9 @@ import swal from "sweetalert";
 import { $ } from "../../../utilities";
 const ListProduct = () => {
     const [product, setProduct] = useState([]);
-    useEffect(() => {
-        getAll("products")
-            .then((res) => res.data)
-            .then((data) => setProduct(data))
-    }, [])
+    const [cates, setCategorys] = useState([]);
+
+
 
     useEffect(() => {
         const btnDeleteElement = Array.from($$(".btn-delete"));
@@ -53,7 +51,15 @@ const ListProduct = () => {
 
         })
     })
-
+    useEffect(() => {
+        getAll("products")
+            .then((res) => res.data)
+            .then((data) => setProduct(data))
+    }, [])
+    useEffect(() => {
+        getAll("categorys")
+            .then(({ data }) => setCategorys(data))
+    }, [])
     return /*html*/ `
             <div id="content" class=" transition-all ease-in-out duration-700  w-full">
                 <div class=" w-full mt-24 ">
@@ -68,7 +74,6 @@ const ListProduct = () => {
                             <th class="border-2 border-black">Giảm giá</th>
                             <th class="border-2 border-black">Giá</th>
                             <th class="border-2 border-black">Danh mục</th>
-                            <th class="border-2 border-black">Lượt xem</th>
                             <th class="border-2 border-black">Ngày tạo</th>
                             <th class="border-2 border-black">Chức năng</th>
                         </thead>
@@ -77,12 +82,11 @@ const ListProduct = () => {
                                 <tr class="border-2 hover:bg-slate-500 hover:text-white">
                                 <td class="border-2">${i + 1}</td>
                                 <td class="border-2"><img src="${item.img}" class="w-10 h-10 object-cover" /></td>
-                                <td class="border-2">${item.name}</td>
+                                <td class="border-2 w-32">${item.name}</td>
                                 <td class="border-2 w-16 relative" >${item.des.slice(0, 10)} ${item.des.split("").length > 10 ? "<span class='moreDes'>...</span>" : ""}<span  class="absolute w-80 more z-10 hidden h-60 bg-white text-black border-2 border-red-700 p-4 rounded-md ">${item.des}</span></td>
                                 <td class="border-2">${item.sale}</td>
                                 <td class="border-2">${item.price}</td>
-                                <td class="border-2">${item.category_id}</td>
-                                <td class="border-2">${item.view}</td>
+                                <td class="border-2">${cates.find(cate => cate.id == item.category_id).name}</td>
                                 <td class="border-2 w-10">${item.createAt}</td>
                                 <td class="border-2"><button class="btn-delete rounded-md bg-red-700 p-2 text-base text-white" data-id="${item.id}">Xóa</button> <a href="/admin/product/update/${item.id}"><button class="rounded-md bg-gray-700 p-2 text-base text-white">Sửa</button></a></td>
                             </tr>

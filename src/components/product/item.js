@@ -6,9 +6,9 @@ const ItemProduct = (data) => {
             <span class="absolute bg-red-700 p-1 text-white text-sm bottom-[88%] right-[78%]">${data.sale}%</span>
             <div class="flex flex-col flex-1 mt-auto font-semibold my-4">
                 <h1 class="text-xl  my-2">${data.name}</h1>
-                <p class="text-red-700 mt-auto flex-shrink-0"><span class="text-lg ">${data.price - (data.price * data.sale / 100)}</span>
+                <p class="text-red-700 mt-auto flex-shrink-0"><span class="text-lg ">${(data.price - (data.price * data.sale / 100)).toLocaleString('vi-VN')}</span>
                         <span class="underline">đ</span>
-                        <sub class="line-through font-light text-gray-600 text-sm italic "> ${data.price}đ</sub>
+                        <sub class="line-through font-light text-gray-600 text-sm italic "> ${data.price.toLocaleString('vi-VN')}đ</sub>
                 </p>
 
             </div>

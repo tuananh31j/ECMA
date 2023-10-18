@@ -70,26 +70,4 @@ const Header = () => {
     `
 }
 
-
-// {/* <div>
-//                 <ul class="flex gap-2 p-5 text-red-700 underline">
-//                     <li><a href="" class="">link/</a></li>
-//                     <li><a href="" class="">link/</a></li>
-//                     <li><a href="" class="">link/</a></li>
-//                 </ul>
-//             </div> */}
-
-
-// <li>
-// <div class="relative">
-// <span id="cate" class="hover:bg-amber-900 hover:text-white rounded-md p-2">DANH
-// MỤC</span>
-// <span class=" menuCate hidden absolute left-[0px]  w-40 h-48 top-1">
-// <ul class="text-white   absolute left-2 top-6  bg-white rounded-md p-4 w-32 h-40">
-
-// ${cates.map(item => `<li class="hover:bg-slate-900 p-2 text-gray-800 rounded-md"><a href="/admin/dashboard">${item.name}</a></li>`)}
-// </ul>
-// </span>
-// </div>
-// </li>
 export default Header;

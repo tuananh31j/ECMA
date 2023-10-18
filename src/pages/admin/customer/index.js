@@ -9,6 +9,7 @@ const ListCustomer = () => {
             .then((data) => setCustomers(data))
     }, [])
 
+
     useEffect(() => {
         const btnDeleteElement = Array.from($$(".btn-delete"));
         const desElement = Array.from($$(".desElement"));

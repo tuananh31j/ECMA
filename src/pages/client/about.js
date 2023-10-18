@@ -17,7 +17,7 @@ const AboutPage = () => {
     ${Banner(banner)}
     <main class="px-5 my-5">
         <div class="aboutUs-title">
-            <h3 class="mb-5 tw-text-xl tw-font-semibold">Giới thiệu</h3>
+            <h3 class="text-2xl font-semibold my-10 mb-16">Giới thiệu</h3>
             <p>Highlands Coffee CPG thuộc Công ty TNHH MTV Thái Kiên tự hào là đơn vị phân phối hợp lệ và độc
                 quyền cho tất cả các sản phẩm đóng gói mang thương hiệu Highlands Coffee®- Thương hiệu cà phê
                 sinh ra từ đất Việt</p>

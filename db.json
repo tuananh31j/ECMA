@@ -169,13 +169,13 @@
     },
     {
       "id": 2,
-      "name": "Nam",
+      "name": "Tuấn Anh",
       "email": "user@gmail.com",
       "phone": "12132123",
       "pass": "1122",
       "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697258011/einszxyqcgmr8q3rnfer.jpg",
       "role": "0",
-      "createAt": "2023-10-14T16:46:52.419Z",
+      "createAt": "2023-10-16T10:06:15.082Z",
       "updateAt": null
     },
     {
@@ -199,13 +199,24 @@
       "createAt": "2023-10-14T17:59:12.258Z",
       "updateAt": null,
       "id": 4
+    },
+    {
+      "id": 5,
+      "name": "Nam",
+      "email": "binddh@gmail.com",
+      "phone": "0349143571454",
+      "pass": "1122",
+      "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697091622/hltpfy4cll9ah2sd2pi4.png",
+      "role": "0",
+      "createAt": "2023-10-16T11:06:37.073Z",
+      "updateAt": null
     }
   ],
   "banners": [
     {
       "id": 1,
       "name": "Trà sữa socola",
-      "img_url": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697254412/i2s8dnfdjof4e6nu32xz.jpg",
+      "img_url": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697453763/pqrkuystbb74xbovpl4o.jpg",
       "menu": 1
     },
     {

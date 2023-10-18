@@ -25,7 +25,7 @@ const ProDetailPage = (id) => {
                         <p>Lượt xem: ${pro.view}</p>  
                             <p>Mã sản phẩm: ${pro.id}</p>
                         </div>
-                        <p class="text-red-700 text-xl mt-auto flex-shrink-0"><span class="text-lg">${Math.round(pro.price - (pro.price * pro.sale / 100))}</span>
+                        <p class="text-red-700 text-xl mt-auto flex-shrink-0"><span class="text-lg">${Math.round(pro.price - (pro.price * pro.sale / 100)).toLocaleString('vi-VN')}</span>
                         <span class="underline">đ</span>
                         <sub class="line-through font-light text-gray-600 text-sm "> ${pro.price}đ</sub>
                 </p>

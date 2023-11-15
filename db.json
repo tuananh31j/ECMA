@@ -9,7 +9,7 @@
       "price": "60000",
       "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697253504/ncjphfvwbpcvo8lohix7.jpg",
       "createAt": "2023-10-14T03:18:24.173Z",
-      "id": 1
+      "_id": 1
     },
     {
       "name": "PHIN ĐEN ĐÁ",
@@ -20,7 +20,7 @@
       "price": "40000",
       "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697253535/izfotfhf9bzgnshoepun.jpg",
       "createAt": "2023-10-14T03:18:55.659Z",
-      "id": 2
+      "_id": 2
     },
     {
       "name": "BẠC XỈU ĐÁ",
@@ -31,7 +31,7 @@
       "price": "50000",
       "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697253572/ak1l4kxjxfkmergteg6w.jpg",
       "createAt": "2023-10-14T03:19:33.216Z",
-      "id": 3
+      "_id": 3
     },
     {
       "name": "Trà thạch đào",
@@ -42,7 +42,7 @@
       "price": "55000",
       "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697253628/tvtea327qkmslscw8cvu.jpg",
       "createAt": "2023-10-14T03:20:28.392Z",
-      "id": 4
+      "_id": 4
     },
     {
       "name": "TRÀ SEN VÀNG (SEN)",
@@ -53,7 +53,7 @@
       "price": "44000",
       "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697253656/dl3tgwcgd10qosvgqhh5.jpg",
       "createAt": "2023-10-14T03:20:56.871Z",
-      "id": 5
+      "_id": 5
     },
     {
       "name": "FREEZE SÔ-CÔ-LA",
@@ -64,10 +64,10 @@
       "price": "88000",
       "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697253735/y68b2sb5k0rcahdmsfne.jpg",
       "createAt": "2023-10-14T03:22:15.361Z",
-      "id": 6
+      "_id": 6
     },
     {
-      "id": 7,
+      "_id": 7,
       "name": "COOKIES & CREAM",
       "des": "Một thức uống ngon lạ miệng bởi sự kết hợp hoàn hảo giữa cookies sô cô la giòn xốp cùng hỗn hợp sữa tươi cùng sữa đặc đem say với đá viên, và cuối cùng không thể thiếu được chính là lớp kem whip mềm mịn cùng cookies sô cô la say nhuyễn.",
       "category_id": "5",
@@ -86,7 +86,7 @@
       "price": "66000",
       "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697253888/nj5t28xbzzowrjfk85wk.jpg",
       "createAt": "2023-10-14T03:24:48.829Z",
-      "id": 8
+      "_id": 8
     },
     {
       "name": "TRÀ XANH ĐẬU ĐỎ",
@@ -97,7 +97,7 @@
       "price": "56000",
       "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697253916/be5bcxcznfi7w6eorvtc.jpg",
       "createAt": "2023-10-14T03:25:16.601Z",
-      "id": 9
+      "_id": 9
     },
     {
       "name": "TRÀ THANH ĐÀO",
@@ -108,7 +108,7 @@
       "price": "44000",
       "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697253944/yt1jgozzrbtsqsi8wsw6.jpg",
       "createAt": "2023-10-14T03:25:44.811Z",
-      "id": 10
+      "_id": 10
     },
     {
       "name": "TRÀ THẠCH VẢI",
@@ -119,7 +119,7 @@
       "price": "54000",
       "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697253972/jdhzhf8wcsvi3n2szorl.jpg",
       "createAt": "2023-10-14T03:26:12.928Z",
-      "id": 11
+      "_id": 11
     },
     {
       "name": "TRÀ SEN VÀNG (CỦ NĂNG)",
@@ -130,7 +130,7 @@
       "price": "56000",
       "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697254014/gussdx4u8iiflgi4iifs.jpg",
       "createAt": "2023-10-14T03:26:54.640Z",
-      "id": 12
+      "_id": 12
     },
     {
       "name": "FREEZE TRÀ XANH",
@@ -141,10 +141,10 @@
       "price": "87000",
       "img": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697254046/tfmct3wnwmzxi86vhfs2.jpg",
       "createAt": "2023-10-14T03:27:26.676Z",
-      "id": 13
+      "_id": 13
     },
     {
-      "id": 14,
+      "_id": 14,
       "name": "CARAMEL PHIN FREEZE",
       "des": "Thơm ngon khó cưỡng! Được kết hợp từ cà phê truyền thống chỉ có tại Highlands Coffee, cùng với caramel, thạch cà phê và đá xay mát lạnh. Trên cùng là lớp kem tươi thơm béo và caramel ngọt ngào. Món nước phù hợp trong những cuộc gặp gỡ bạn bè, bởi sự ngọt ngào thường mang mọi người xích lại gần nhau.",
       "category_id": "5",
@@ -165,10 +165,10 @@
       "role": "1",
       "createAt": "2023-10-14T03:58:12.519Z",
       "updateAt": null,
-      "id": 1
+      "_id": 1
     },
     {
-      "id": 2,
+      "_id": 2,
       "name": "Tuấn Anh",
       "email": "user@gmail.com",
       "phone": "12132123",
@@ -187,7 +187,7 @@
       "role": "0",
       "createAt": "2023-10-14T17:57:44.329Z",
       "updateAt": null,
-      "id": 3
+      "_id": 3
     },
     {
       "name": "ok",
@@ -198,10 +198,10 @@
       "role": "0",
       "createAt": "2023-10-14T17:59:12.258Z",
       "updateAt": null,
-      "id": 4
+      "_id": 4
     },
     {
-      "id": 5,
+      "_id": 5,
       "name": "Nam",
       "email": "binddh@gmail.com",
       "phone": "0349143571454",
@@ -214,25 +214,25 @@
   ],
   "banners": [
     {
-      "id": 1,
+      "_id": 1,
       "name": "Trà sữa socola",
       "img_url": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697453763/pqrkuystbb74xbovpl4o.jpg",
       "menu": 1
     },
     {
-      "id": 2,
+      "_id": 2,
       "name": "Trà sữa socola",
       "img_url": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697254393/dpt4nc5wffog2hcqk93t.jpg",
       "menu": 2
     },
     {
-      "id": 3,
+      "_id": 3,
       "name": "Trà sữa socola",
       "img_url": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697254363/zpflml5jtfj8s6mv9w2n.jpg",
       "menu": 3
     },
     {
-      "id": 4,
+      "_id": 4,
       "name": "Trà sữa socola44",
       "img_url": "http://res.cloudinary.com/djcimgjcc/image/upload/v1697254281/mi5enbrdfv2qnormalxw.jpg",
       "menu": 4
@@ -241,23 +241,23 @@
   "categorys": [
     {
       "name": "Cà phê",
-      "id": 1
+      "_id": 1
     },
     {
       "name": "Phindi",
-      "id": 2
+      "_id": 2
     },
     {
       "name": "Trà",
-      "id": 3
+      "_id": 3
     },
     {
-      "id": 4,
+      "_id": 4,
       "name": "CaCao"
     },
     {
       "name": "FREEZE",
-      "id": 5
+      "_id": 5
     }
   ]
 }
